@@ -1,0 +1,2871 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>مهام فريق الدعم الفني المركزي</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --primary:       #1a3a6e;
+    --primary-light: #2059a8;
+    --unrwa-blue:    #1c6faf;
+    --unrwa-sky:     #3b9fd4;
+    --unrwa-light:   #e8f4fb;
+    --accent:        #3b9fd4;
+    --accent-gold:   #e8a100;
+    --accent-teal:   #1a7d6e;
+    --accent-green:  #2e8b3e;
+    --accent-purple: #5e3a9e;
+    --accent-coral:  #c0392b;
+    --bg:      #eef4fb;
+    --surface: #ffffff;
+    --surface2:#f4f8fd;
+    --text:    #0e2247;
+    --text-muted: #4a6080;
+    --border:  #c8d9ee;
+    --shadow:  0 4px 24px rgba(28,111,175,0.11);
+    --radius:  16px;
+    --radius-sm: 10px;
+  }
+
+  body {
+    font-family: 'Cairo', 'Tajawal', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.95;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+  }
+
+  .system-banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 16px 18px;
+    border-radius: 16px;
+    border: 1px solid rgba(147, 197, 253, 0.45);
+    background:
+      radial-gradient(900px 260px at 20% 40%, rgba(59, 159, 212, 0.22), rgba(59, 159, 212, 0) 60%),
+      linear-gradient(135deg, rgba(14, 42, 92, 0.06), rgba(28, 111, 175, 0.10));
+    box-shadow: 0 10px 28px rgba(26, 58, 110, 0.10);
+  }
+  .system-banner-link {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    transition: transform 0.16s ease, box-shadow 0.16s ease;
+  }
+  .system-banner-link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 16px 30px rgba(26, 58, 110, 0.16);
+  }
+  .system-banner-left {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    min-width: 0;
+    flex: 1;
+  }
+  .system-banner-ico {
+    width: 44px;
+    height: 44px;
+    border-radius: 14px;
+    background: linear-gradient(135deg, #1c6faf, #2059a8);
+    box-shadow: 0 10px 24px rgba(28,111,175,0.22);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 18px;
+    flex-shrink: 0;
+  }
+  .system-banner-text {
+    min-width: 0;
+  }
+  .system-banner-kicker {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    font-weight: 800;
+    color: var(--primary);
+    background: rgba(255,255,255,0.7);
+    border: 1px solid rgba(59,159,212,0.16);
+    padding: 4px 10px;
+    border-radius: 999px;
+  }
+  .system-banner-title {
+    margin-top: 8px;
+    font-size: 16px;
+    font-weight: 900;
+    color: var(--primary);
+    line-height: 1.5;
+  }
+  .system-banner-desc {
+    margin-top: 4px;
+    font-size: 13px;
+    color: var(--text-muted);
+    line-height: 1.85;
+  }
+  .system-banner-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px 14px;
+    border-radius: 12px;
+    border: 1px solid rgba(59,159,212,0.22);
+    background: #ffffff;
+    color: var(--primary);
+    font-size: 13px;
+    font-weight: 800;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+    flex-shrink: 0;
+  }
+  .system-banner-btn:hover {
+    transform: translateY(-1px);
+    background: #f7fbff;
+    box-shadow: 0 10px 22px rgba(28,111,175,0.12);
+  }
+  .resource-row-banner {
+    display: flex !important;
+    align-items: center !important;
+    gap: 12px !important;
+    padding: 12px 14px !important;
+    border-radius: 12px !important;
+    border: 1px solid rgba(147, 197, 253, 0.45) !important;
+    background:
+      radial-gradient(850px 220px at 20% 35%, rgba(59, 159, 212, 0.20), rgba(59, 159, 212, 0) 60%),
+      linear-gradient(135deg, rgba(14, 42, 92, 0.06), rgba(28, 111, 175, 0.10)) !important;
+    box-shadow: 0 10px 24px rgba(26, 58, 110, 0.10);
+    transition: transform 0.14s ease, box-shadow 0.14s ease, border-color 0.14s ease;
+    cursor: pointer;
+  }
+  .resource-row-banner:hover {
+    transform: translateY(-1px);
+    border-color: rgba(96, 165, 250, 0.7) !important;
+    box-shadow: 0 14px 26px rgba(26, 58, 110, 0.16);
+  }
+  .resource-row-banner > span {
+    flex: 1 !important;
+    min-width: 0 !important;
+    color: var(--primary) !important;
+    font-weight: 700 !important;
+  }
+  .resource-row-banner span,
+  .resource-row-banner div,
+  .resource-row-banner strong,
+  .resource-row-banner p {
+    color: var(--primary) !important;
+  }
+  .resource-row-banner .link-card-action,
+  .resource-row-banner .link-card-action span,
+  .resource-row-banner .link-card-action svg {
+    color: #ffffff !important;
+  }
+  .link-card-action {
+    flex-shrink: 0 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 8px !important;
+    min-width: 148px;
+    padding: 9px 14px !important;
+    border-radius: 10px !important;
+    border: 1px solid rgba(59,159,212,0.22) !important;
+    background: #ffffff !important;
+    color: var(--primary) !important;
+    font-size: 14px !important;
+    font-weight: 800 !important;
+    text-decoration: none !important;
+    white-space: nowrap !important;
+    box-shadow: 0 8px 18px rgba(28,111,175,0.12);
+    transition: background 0.14s ease, transform 0.14s ease, box-shadow 0.14s ease;
+  }
+  .link-card-action:hover {
+    transform: translateY(-1px);
+    background: #f7fbff !important;
+    box-shadow: 0 10px 20px rgba(28,111,175,0.18);
+  }
+  .link-card-action svg {
+    width: 13px;
+    height: 13px;
+    flex-shrink: 0;
+  }
+  .featured-link-row {
+    position: relative;
+    box-shadow: 0 14px 30px rgba(14,34,71,0.14);
+  }
+  .featured-link-row::before {
+    content: none;
+    display: none;
+  }
+  .featured-link-row .link-card-action {
+    color: #fff !important;
+    animation: featuredCtaPulse 3s ease-in-out infinite;
+  }
+  @keyframes featuredCtaPulse {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-1px); }
+  }
+  .featured-tone-1 {
+    border-color: rgba(245, 158, 11, 0.45) !important;
+    background:
+      radial-gradient(700px 180px at 18% 28%, rgba(245, 158, 11, 0.14), rgba(245, 158, 11, 0) 62%),
+      linear-gradient(135deg, #fff9ed, #eef6ff) !important;
+  }
+  .featured-tone-1::before {
+    background: linear-gradient(135deg, #f59e0b, #d97706);
+    box-shadow: 0 6px 14px rgba(217,119,6,0.30);
+  }
+  .featured-tone-1 .link-card-action {
+    background: linear-gradient(135deg, #f59e0b, #d97706) !important;
+    border-color: #fbbf24 !important;
+    box-shadow: 0 10px 22px rgba(217,119,6,0.34);
+  }
+  .featured-tone-1 .link-card-action:hover { background: linear-gradient(135deg, #d97706, #b45309) !important; }
+  .featured-tone-2 {
+    border-color: rgba(16, 185, 129, 0.45) !important;
+    background:
+      radial-gradient(700px 180px at 18% 28%, rgba(16, 185, 129, 0.14), rgba(16, 185, 129, 0) 62%),
+      linear-gradient(135deg, #ecfdf5, #eef6ff) !important;
+  }
+  .featured-tone-2::before {
+    background: linear-gradient(135deg, #10b981, #0f766e);
+    box-shadow: 0 6px 14px rgba(16,185,129,0.30);
+  }
+  .featured-tone-2 .link-card-action {
+    background: linear-gradient(135deg, #10b981, #0f766e) !important;
+    border-color: #6ee7b7 !important;
+    box-shadow: 0 10px 22px rgba(16,185,129,0.30);
+  }
+  .featured-tone-2 .link-card-action:hover { background: linear-gradient(135deg, #0f766e, #115e59) !important; }
+  .featured-tone-3 {
+    border-color: rgba(99, 102, 241, 0.45) !important;
+    background:
+      radial-gradient(700px 180px at 18% 28%, rgba(99, 102, 241, 0.14), rgba(99, 102, 241, 0) 62%),
+      linear-gradient(135deg, #eef2ff, #eef6ff) !important;
+  }
+  .featured-tone-3::before {
+    background: linear-gradient(135deg, #6366f1, #4338ca);
+    box-shadow: 0 6px 14px rgba(99,102,241,0.30);
+  }
+  .featured-tone-3 .link-card-action {
+    background: linear-gradient(135deg, #6366f1, #4338ca) !important;
+    border-color: #a5b4fc !important;
+    box-shadow: 0 10px 22px rgba(99,102,241,0.32);
+  }
+  .featured-tone-3 .link-card-action:hover { background: linear-gradient(135deg, #4f46e5, #3730a3) !important; }
+  .featured-tone-4 {
+    border-color: rgba(236, 72, 153, 0.45) !important;
+    background:
+      radial-gradient(700px 180px at 18% 28%, rgba(236, 72, 153, 0.14), rgba(236, 72, 153, 0) 62%),
+      linear-gradient(135deg, #fdf2f8, #eef6ff) !important;
+  }
+  .featured-tone-4::before {
+    background: linear-gradient(135deg, #ec4899, #be185d);
+    box-shadow: 0 6px 14px rgba(236,72,153,0.30);
+  }
+  .featured-tone-4 .link-card-action {
+    background: linear-gradient(135deg, #ec4899, #be185d) !important;
+    border-color: #f9a8d4 !important;
+    box-shadow: 0 10px 22px rgba(236,72,153,0.30);
+  }
+  .featured-tone-4 .link-card-action:hover { background: linear-gradient(135deg, #db2777, #9d174d) !important; }
+  .featured-tone-blue {
+    border-color: rgba(28, 111, 175, 0.45) !important;
+    background:
+      radial-gradient(700px 180px at 18% 28%, rgba(28, 111, 175, 0.14), rgba(28, 111, 175, 0) 62%),
+      linear-gradient(135deg, #edf6ff, #eef6ff) !important;
+  }
+  .featured-tone-blue::before {
+    background: linear-gradient(135deg, #1c6faf, #2059a8);
+    box-shadow: 0 6px 14px rgba(28,111,175,0.30);
+  }
+  .featured-tone-blue .link-card-action {
+    background: linear-gradient(135deg, #1c6faf, #2059a8) !important;
+    border-color: #7fb6e6 !important;
+    box-shadow: 0 10px 22px rgba(28,111,175,0.32);
+  }
+  .featured-tone-blue .link-card-action:hover { background: linear-gradient(135deg, #2059a8, #1a3a6e) !important; }
+  .featured-tone-purple {
+    border-color: rgba(94, 58, 158, 0.45) !important;
+    background:
+      radial-gradient(700px 180px at 18% 28%, rgba(94, 58, 158, 0.14), rgba(94, 58, 158, 0) 62%),
+      linear-gradient(135deg, #f5f3ff, #eef6ff) !important;
+  }
+  .featured-tone-purple::before {
+    background: linear-gradient(135deg, #5e3a9e, #7254c8);
+    box-shadow: 0 6px 14px rgba(94,58,158,0.28);
+  }
+  .featured-tone-purple .link-card-action {
+    background: linear-gradient(135deg, #5e3a9e, #7254c8) !important;
+    border-color: #c4b5fd !important;
+    box-shadow: 0 10px 22px rgba(94,58,158,0.26);
+  }
+  .featured-tone-purple .link-card-action:hover { background: linear-gradient(135deg, #6d28d9, #5b21b6) !important; }
+  /* بنفسجي المهمة 13 — نفس تدرج شريط العنوان (.c13): #7a1a80 → #9e30a8 */
+  .featured-tone-purple-soft {
+    border-color: rgba(122, 26, 128, 0.42) !important;
+    background:
+      radial-gradient(700px 180px at 18% 28%, rgba(122, 26, 128, 0.10), rgba(122, 26, 128, 0) 62%),
+      linear-gradient(135deg, #fcf5fc, #f5e8f4) !important;
+    box-shadow: 0 12px 26px rgba(122, 26, 128, 0.10) !important;
+  }
+  .featured-tone-purple-soft::before {
+    background: linear-gradient(160deg, #7a1a80, #9e30a8);
+    box-shadow: 0 6px 14px rgba(122, 26, 128, 0.32);
+  }
+  .featured-tone-purple-soft .link-card-action {
+    background: linear-gradient(160deg, #7a1a80, #9e30a8) !important;
+    border-color: rgba(200, 140, 210, 0.85) !important;
+    box-shadow: 0 10px 22px rgba(122, 26, 128, 0.28);
+  }
+  .featured-tone-purple-soft .link-card-action:hover { background: linear-gradient(160deg, #681470, #8824a0) !important; }
+  .featured-tone-green {
+    border-color: rgba(46, 139, 62, 0.38) !important;
+    background:
+      radial-gradient(720px 200px at 24% 36%, rgba(58, 170, 80, 0.18), rgba(58, 170, 80, 0) 58%),
+      linear-gradient(135deg, #f0fdf4 0%, #ecfdf5 48%, #e6f7ec 100%) !important;
+    box-shadow: 0 12px 28px rgba(22, 101, 52, 0.09) !important;
+  }
+  .featured-tone-green::before {
+    background: linear-gradient(135deg, #2e8b3e, #3aaa50);
+    box-shadow: 0 6px 14px rgba(46, 139, 62, 0.28);
+  }
+  .featured-tone-green .link-card-action {
+    background: linear-gradient(135deg, #2e8b3e, #359848) !important;
+    border-color: #86efac !important;
+    box-shadow: 0 10px 22px rgba(46, 139, 62, 0.26);
+  }
+  .featured-tone-green .link-card-action:hover { background: linear-gradient(135deg, #267a35, #2e8b3e) !important; }
+  .featured-tone-red {
+    border-color: rgba(176, 64, 32, 0.42) !important;
+    background:
+      radial-gradient(720px 200px at 24% 36%, rgba(200, 74, 40, 0.16), rgba(200, 74, 40, 0) 58%),
+      linear-gradient(135deg, #fff7f3 0%, #fff3ed 48%, #fdf0e8 100%) !important;
+    box-shadow: 0 12px 28px rgba(138, 46, 16, 0.10) !important;
+  }
+  .featured-tone-red::before {
+    background: linear-gradient(135deg, #8a2e10, #b04020);
+    box-shadow: 0 6px 14px rgba(138, 46, 16, 0.28);
+  }
+  .featured-tone-red .link-card-action {
+    background: linear-gradient(135deg, #8a2e10, #b04020) !important;
+    border-color: #f59e7c !important;
+    box-shadow: 0 10px 22px rgba(138, 46, 16, 0.28);
+  }
+  .featured-tone-red .link-card-action:hover { background: linear-gradient(135deg, #7a240c, #9a371c) !important; }
+  .task-card .resource-row-banner .link-card-action {
+    min-width: 84px;
+    padding: 4px 7px !important;
+    border-radius: 10px !important;
+    font-size: 11px !important;
+    font-weight: 600 !important;
+    gap: 4px !important;
+    box-shadow: 0 3px 8px rgba(28,111,175,0.12) !important;
+  }
+  .task-card .resource-row-banner .link-card-action svg {
+    width: 9px !important;
+    height: 9px !important;
+  }
+  @media (max-width: 760px) {
+    .resource-row-banner {
+      flex-direction: column !important;
+      align-items: stretch !important;
+    }
+    .link-card-action {
+      width: 100%;
+      font-size: 13px !important;
+    }
+  }
+  @media (max-width: 760px) {
+    .system-banner {
+      flex-direction: column;
+      align-items: stretch;
+    }
+    .system-banner-btn {
+      width: 100%;
+    }
+  }
+
+  /* ── HERO ── */
+  .hero {
+    background: linear-gradient(135deg, #0e2a5c 0%, #1a3a6e 35%, #1c6faf 70%, #2059a8 100%);
+    padding: 70px 40px 60px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='rgba(255,255,255,0.04)' stroke-width='1'%3E%3Ccircle cx='40' cy='40' r='30'/%3E%3Ccircle cx='40' cy='40' r='20'/%3E%3Ccircle cx='40' cy='40' r='10'/%3E%3C/g%3E%3C/svg%3E") center/80px;
+  }
+  .hero-badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.22);
+    color: #93c5fd;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 6px 20px;
+    border-radius: 999px;
+    margin-bottom: 24px;
+    letter-spacing: 1px;
+  }
+  .hero h1 {
+    font-size: clamp(28px, 5vw, 52px);
+    font-weight: 900;
+    color: #ffffff;
+    margin-bottom: 16px;
+    line-height: 1.3;
+    position: relative;
+  }
+  .hero-sub {
+    font-size: 17px;
+    color: rgba(255,255,255,0.7);
+    max-width: 600px;
+    margin: 0 auto 40px;
+    position: relative;
+  }
+  .stats-row {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    position: relative;
+    margin-top: 10px;
+  }
+  .stat-card {
+    background: rgba(255,255,255,0.10);
+    border: 1px solid rgba(255,255,255,0.22);
+    border-radius: 999px;
+    padding: 10px 24px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    backdrop-filter: blur(4px);
+    transition: background 0.2s, transform 0.2s;
+  }
+  .stat-card:hover { background: rgba(255,255,255,0.18); transform: translateY(-2px); }
+  .stat-icon { font-size: 16px; }
+  .stat-num {
+    font-size: 15px;
+    font-weight: 900;
+    color: #e8c840;
+    display: inline;
+  }
+  .stat-label {
+    font-size: 14px;
+    color: rgba(255,255,255,0.90);
+    font-weight: 600;
+  }
+
+  /* ── MAIN LAYOUT ── */
+  .container {
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .section-title {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 28px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid var(--border);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .section-title::before {
+    content: '';
+    width: 4px; height: 24px;
+    background: var(--unrwa-sky);
+    border-radius: 4px;
+    display: inline-block;
+  }
+
+  /* ── TASK CARD ── */
+  .task-grid {
+    display: grid;
+    gap: 20px;
+  }
+
+  .task-card {
+    background: var(--surface);
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .task-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 36px rgba(26,58,110,0.15);
+  }
+
+  .task-header {
+    display: flex;
+    align-items: stretch;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  /* Colored left stripe with ordinal label */
+  .task-stripe {
+    width: 110px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 8px;
+    gap: 4px;
+  }
+  .task-ordinal {
+    font-size: 11px;
+    font-weight: 700;
+    color: rgba(255,255,255,0.85);
+    letter-spacing: 0.5px;
+    text-align: center;
+  }
+  .task-ordinal-name {
+    font-size: 16px;
+    font-weight: 900;
+    color: #fff;
+    text-align: center;
+    line-height: 1.3;
+  }
+
+  .task-header-content {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 24px 28px;
+  }
+  .task-title-wrap { flex: 1; }
+  .task-title {
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--primary);
+    line-height: 1.55;
+  }
+  .task-meta {
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-top: 4px;
+  }
+  .task-toggle {
+    width: 32px; height: 32px;
+    border-radius: 8px;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+    transition: background 0.2s, transform 0.3s;
+    font-size: 13px;
+    color: var(--text-muted);
+  }
+  .task-card.open .task-toggle { transform: rotate(180deg); background: var(--primary); color: #fff; }
+
+  .task-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.45s cubic-bezier(0.4,0,0.2,1), padding 0.3s;
+    padding: 0 40px;
+    border-top: 0px solid var(--border);
+  }
+  .task-card.open .task-body {
+    max-height: 8000px;
+    padding: 32px 40px 48px;
+    border-top: 1px solid var(--border);
+  }
+
+  @media (max-width: 500px) {
+    .task-stripe { width: 80px; }
+    .task-ordinal-name { font-size: 13px; }
+    .task-ordinal { font-size: 10px; }
+    .task-header-content { padding: 16px 14px; }
+    .task-title { font-size: 15px; }
+  }
+  /* ── INNER CONTENT ── */
+  .intro-text {
+    font-size: 14.5px;
+    color: var(--text-muted);
+    background: var(--surface2);
+    border-right: 3px solid var(--unrwa-sky);
+    padding: 14px 18px;
+    border-radius: 0 8px 8px 0;
+    margin-bottom: 24px;
+    line-height: 1.9;
+  }
+  #t6 .intro-text {
+    border-right-color: var(--accent-green);
+    font-weight: 700;
+    color: var(--text);
+  }
+  #t2 .intro-text {
+    border-right-color: var(--accent-teal);
+  }
+  #t3 .intro-text {
+    border-right-color: var(--accent-purple);
+  }
+  #t4 .intro-text {
+    border-right-color: #b07800;
+  }
+  #t4 .sub-title .dot {
+    background: #c8941a !important;
+  }
+  #t5 .intro-text {
+    border-right-color: var(--accent-coral);
+  }
+  #t5 .sub-title .dot {
+    background: var(--accent-coral) !important;
+  }
+  #t7 .intro-text {
+    color: var(--primary);
+  }
+  #t7 .intro-text strong {
+    color: var(--primary);
+    font-weight: 700;
+  }
+  #t12 .intro-text {
+    border-right-color: #1c5a9e;
+    background: linear-gradient(135deg, #f2f8fd, #e8f4fb);
+    color: var(--primary);
+  }
+  #t12 .intro-text strong {
+    color: var(--primary);
+    font-weight: 800;
+  }
+
+  /* عمود 01 / 02 / 03 — شريط إشارة نحو المحتوى + عمق بصري */
+  #t12 .t12-num-pill {
+    position: relative;
+    width: 56px;
+    flex-shrink: 0;
+    margin-inline-start: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    clip-path: polygon(12px 0, 100% 0, 100% 100%, 12px 100%, 0 50%);
+    background: linear-gradient(168deg, #0e2844 0%, #153a5c 38%, #1c5f8f 72%, #2478b8 100%);
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.16),
+      inset 0 -1px 0 rgba(0, 0, 0, 0.18),
+      -3px 0 14px rgba(20, 61, 94, 0.22);
+  }
+  #t12 .t12-num-pill::after {
+    content: '';
+    position: absolute;
+    inset: -20% -30% -20% 0;
+    background: linear-gradient(
+      118deg,
+      transparent 40%,
+      rgba(255, 255, 255, 0.06) 48%,
+      rgba(255, 255, 255, 0.14) 50%,
+      rgba(255, 255, 255, 0.05) 54%,
+      transparent 62%
+    );
+    pointer-events: none;
+  }
+  #t12 .t12-num-pill span {
+    position: relative;
+    z-index: 1;
+    font-size: 21px;
+    font-weight: 900;
+    color: #fff;
+    letter-spacing: -0.04em;
+    font-variant-numeric: tabular-nums;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.35), 0 0 18px rgba(59, 159, 212, 0.35);
+  }
+  #t8 .intro-text {
+    border-right-color: var(--accent-purple);
+  }
+  #t8 .intro-text strong {
+    color: #4a2080;
+    font-weight: 700;
+  }
+  #t9 .intro-text {
+    border-right-color: #8a2e10;
+  }
+  #t9 .intro-text strong {
+    color: var(--text);
+    font-weight: 700;
+  }
+  #t11 .intro-text {
+    border-right-color: var(--accent-green);
+    background: linear-gradient(135deg, #f0faf9, #e8f3ef);
+  }
+  #t11 .resource-row-banner > span {
+    font-weight: 400 !important;
+  }
+  #t11 .resource-row-banner > span strong {
+    font-weight: 800 !important;
+  }
+  #t11 .resource-row-banner > span > span {
+    font-weight: 400 !important;
+  }
+  #t13 .intro-text {
+    border-right-color: #7a1a80;
+    background: linear-gradient(135deg, #fdf8fd, #f8eef6);
+    color: var(--text-muted);
+  }
+  #t13 .intro-text strong {
+    font-weight: 700;
+    color: var(--primary);
+  }
+  #t13 .resource-row-banner > span,
+  #t13 .resource-row-banner > span strong {
+    font-weight: 700 !important;
+  }
+
+  /* مرجع سريع — عمود الأنظمة أزرق فاتح، عمود الأدلة فيروزي هادئ */
+  #quick-ref-section .quick-ref-systems-list,
+  #quick-ref-section .quick-ref-guides-list {
+    padding: 12px 14px !important;
+    gap: 6px !important;
+  }
+  #quick-ref-section .quick-ref-systems-list {
+    background: linear-gradient(180deg, #e8f4fb, #f2f8fd) !important;
+  }
+  #quick-ref-section .quick-ref-guides-list {
+    background: linear-gradient(180deg, #f0faf8, #f5fcfb) !important;
+  }
+  #quick-ref-section .resource-row-banner {
+    padding: 7px 10px !important;
+    gap: 8px !important;
+  }
+  #quick-ref-section .resource-row-banner > span {
+    font-size: 12.5px !important;
+    line-height: 1.45 !important;
+  }
+  /* زر «فتح» — نفس المقاس في الأنظمة والأدلة (يتفوق على تدرجات featured-tone) */
+  #quick-ref-section #systems-body .resource-row-banner .link-card-action,
+  #quick-ref-section #guides-body .resource-row-banner .link-card-action {
+    min-width: 52px !important;
+    padding: 3px 10px !important;
+    font-size: 10px !important;
+    font-weight: 600 !important;
+    line-height: 1.25 !important;
+    border-radius: 7px !important;
+    gap: 3px !important;
+    box-sizing: border-box !important;
+  }
+  #quick-ref-section #systems-body .resource-row-banner .link-card-action svg,
+  #quick-ref-section #guides-body .resource-row-banner .link-card-action svg {
+    width: 8px !important;
+    height: 8px !important;
+    flex-shrink: 0 !important;
+  }
+  /* بطاقات الأدلة: ألوان أخف وأقرب لترويسة القسم */
+  #quick-ref-section #guides-body .resource-row-banner.featured-tone-green {
+    border-color: rgba(26, 125, 110, 0.22) !important;
+    background:
+      radial-gradient(720px 220px at 24% 38%, rgba(20, 160, 138, 0.09), rgba(20, 160, 138, 0) 58%),
+      linear-gradient(135deg, #f5fcfb 0%, #f2faf8 48%, #eef6f4 100%) !important;
+    box-shadow: 0 4px 14px rgba(26, 125, 110, 0.07) !important;
+  }
+  #quick-ref-section #guides-body .resource-row-banner .link-card-action {
+    background: linear-gradient(135deg, #1a7d6e, #1a9e8f) !important;
+    border-color: rgba(160, 230, 210, 0.55) !important;
+    color: #fff !important;
+    box-shadow: 0 4px 12px rgba(26, 125, 110, 0.22) !important;
+  }
+  #quick-ref-section #guides-body .resource-row-banner .link-card-action:hover {
+    background: linear-gradient(135deg, #156b5f, #1a7d6e) !important;
+  }
+  #quick-ref-section #guides-body .resource-row-banner > span {
+    color: #1a4540 !important;
+  }
+  #quick-ref-section #guides-body .resource-row-banner > span strong {
+    color: #17423d !important;
+  }
+
+  .sub-section {
+    margin-bottom: 20px;
+  }
+  .sub-title {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .sub-title .dot {
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  /* ── TABLE ── */
+  .data-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13.5px;
+    margin-top: 10px;
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+    border: 1px solid var(--border);
+  }
+  .data-table th {
+    background: var(--primary);
+    color: #fff;
+    padding: 11px 16px;
+    font-weight: 600;
+    text-align: right;
+    font-size: 13px;
+  }
+  .data-table td {
+    padding: 10px 16px;
+    border-bottom: 1px solid var(--border);
+    color: var(--text);
+  }
+  .data-table tr:last-child td { border-bottom: none; }
+  .data-table tr:nth-child(even) td { background: var(--surface2); }
+  .data-table tr:hover td { background: #eef3fb; }
+
+  /* ── LINK BUTTON ── */
+  .link-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 8px 16px;
+    color: var(--unrwa-blue);
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    margin: 4px 4px 4px 0;
+    transition: background 0.15s, border-color 0.15s;
+    word-break: break-all;
+  }
+  .link-btn:hover { background: #dbeeff; border-color: var(--unrwa-sky); }
+  .link-btn svg { flex-shrink: 0; }
+
+  /* Paperclip-only icon button */
+  .link-btn:not([data-label]) {
+    font-size: 16px;
+  }
+  a.link-btn:has(> :only-child) {
+    padding: 6px 10px;
+  }
+  /* Paperclip clip button - for guides list */
+  .clip-btn {
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    color: var(--unrwa-blue);
+    font-size: 16px;
+    text-decoration: none;
+    transition: background 0.15s, border-color 0.15s, transform 0.15s;
+  }
+  .clip-btn:hover {
+    background: #dbeeff;
+    border-color: var(--unrwa-sky);
+    transform: scale(1.1);
+  }
+
+  /* Icon-only paperclip variant */
+  .icon-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    color: var(--unrwa-blue);
+    font-size: 17px;
+    text-decoration: none;
+    margin: 3px 3px 3px 0;
+    transition: background 0.15s, border-color 0.15s, transform 0.15s;
+    vertical-align: middle;
+  }
+  .icon-link:hover {
+    background: #dbeeff;
+    border-color: var(--unrwa-sky);
+    transform: scale(1.1);
+  }
+
+  /* ── BULLET LIST ── */
+  .content-list {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+  }
+  .content-list li {
+    padding: 8px 14px 8px 0;
+    font-size: 14px;
+    color: var(--text);
+    border-bottom: 1px dashed var(--border);
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    line-height: 1.7;
+  }
+  .content-list li:last-child { border-bottom: none; }
+  .content-list li::before {
+    content: '◈';
+    color: var(--accent);
+    font-size: 10px;
+    margin-top: 6px;
+    flex-shrink: 0;
+  }
+
+  /* ── FEATURE CHIPS ── */
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  .chip {
+    padding: 5px 14px;
+    border-radius: 999px;
+    font-size: 12.5px;
+    font-weight: 600;
+    border: 1px solid transparent;
+  }
+  .chip-blue   { background: #dbeafe; color: #1d4ed8; border-color: #bfdbfe; }
+  .chip-teal   { background: #ccfbf1; color: #0f766e; border-color: #99f6e4; }
+  .chip-amber  { background: #fef3c7; color: #b45309; border-color: #fde68a; }
+  .chip-green  { background: #dcfce7; color: #15803d; border-color: #bbf7d0; }
+  .chip-purple { background: #ede9fe; color: #6d28d9; border-color: #ddd6fe; }
+  .chip-coral  { background: #fee2e2; color: #b91c1c; border-color: #fecaca; }
+
+  /* ── NOTE BOX ── */
+  .note-box {
+    background: #fefce8;
+    border: 1px solid #fde68a;
+    border-right: 3px solid #f59e0b;
+    border-radius: 0 8px 8px 0;
+    padding: 12px 16px;
+    font-size: 13px;
+    color: #78350f;
+    margin-top: 14px;
+    line-height: 1.7;
+  }
+
+  /* ── COLORS per task – UNRWA aligned ── */
+  .c1  { background: linear-gradient(160deg,#1c6faf,#2059a8); }
+  .c2  { background: linear-gradient(160deg,#1a7d6e,#14a08a); }
+  .c3  { background: linear-gradient(160deg,#5e3a9e,#7254c8); }
+  .c4  { background: linear-gradient(160deg,#b07800,#d4960a); }
+  .c5  { background: linear-gradient(160deg,#b03030,#c0392b); }
+  .c6  { background: linear-gradient(160deg,#2e8b3e,#3aaa50); }
+  .c7  { background: linear-gradient(160deg,#0e5c8a,#1c7ab5); }
+  .c8  { background: linear-gradient(160deg,#4a2080,#6034a8); }
+  .c9  { background: linear-gradient(160deg,#8a2e10,#b04020); }
+  .c10 { background: linear-gradient(160deg,#1a3a6e,#2059a8); }
+  .c11 { background: linear-gradient(160deg,#1f7a34,#2ea44f); }
+  .c12 { background: linear-gradient(160deg,#1c5a9e,#2878cc); }
+  .c13 { background: linear-gradient(160deg,#7a1a80,#9e30a8); }
+
+  /* ── FOOTER ── */
+  .footer {
+    text-align: center;
+    padding: 32px 24px;
+    color: var(--text-muted);
+    font-size: 13px;
+    border-top: 1px solid var(--border);
+  }
+
+  @media (max-width: 600px) {
+    .hero { padding: 48px 20px 40px; }
+    .container { padding: 28px 14px 60px; }
+    .task-header { padding: 16px 18px; }
+    .task-body { padding: 0 18px 20px; }
+    .task-card.open .task-body { padding-top: 18px; }
+    .stats-row { gap: 8px; }
+    .stat-chip { font-size: 12px; padding: 8px 14px; }
+  }
+
+  /* ══════════════════════════════════════════
+     RESPONSIVE — MOBILE FULL
+  ══════════════════════════════════════════ */
+
+  /* ── Tablet: hide sidebar text, show icons only ── */
+  @media (max-width: 900px) {
+    #sidebar { width: 56px !important; }
+    #sidebar .nb { font-size: 8px !important; }
+    #sidebar span.nav-label { display: none !important; }
+    #sidebar .sidebar-title-text { display: none !important; }
+    .nav-link { justify-content: center; padding: 10px 6px !important; }
+  }
+
+  /* ── Mobile: sidebar hidden, bottom nav shown ── */
+  @media (max-width: 640px) {
+
+    /* Body/Layout */
+    body { font-size: 14px; }
+
+    /* Hero */
+    .hero { padding: 36px 16px 28px; }
+    .hero h1 { font-size: 22px; line-height: 1.35; }
+    .hero-sub { font-size: 13px; margin-bottom: 24px; }
+    .hero-badge { font-size: 11px; padding: 5px 14px; }
+    .stats-row { gap: 8px; justify-content: center; }
+    .stat-card { padding: 7px 14px; gap: 6px; }
+    .stat-num { font-size: 13px; }
+    .stat-label { font-size: 12px; }
+
+    /* Hide sidebar completely on mobile */
+    #sidebar { display: none !important; }
+
+    /* Show mobile bottom nav */
+    #mobile-bottom-nav { display: flex !important; }
+
+    /* Content area full width */
+    .layout-flex { flex-direction: column !important; }
+
+    /* Task cards */
+    .task-stripe { width: 72px !important; padding: 14px 6px !important; }
+    .task-ordinal-name { font-size: 12px !important; }
+    .task-ordinal { font-size: 9px !important; }
+    .task-header-content { padding: 14px 12px !important; gap: 10px !important; }
+    .task-title { font-size: 14px !important; }
+    .task-meta { font-size: 11px !important; }
+    .task-toggle { width: 26px !important; height: 26px !important; font-size: 11px !important; }
+
+    .task-body { padding: 0 16px !important; }
+    .task-card.open .task-body { padding: 20px 16px 28px !important; }
+
+    /* Intro text */
+    .intro-text { font-size: 14.5px !important; padding: 12px 14px !important; line-height: 1.9 !important; margin-bottom: 18px !important; }
+
+    /* Sub sections */
+    .sub-title { font-size: 15px !important; }
+    .sub-section { margin-bottom: 20px !important; }
+
+    /* Content list */
+    .content-list li { font-size: 14px !important; padding: 8px 10px 8px 0 !important; }
+
+    /* Tables - scrollable */
+    .table-wrap { overflow-x: auto !important; -webkit-overflow-scrolling: touch; }
+
+    /* Task body padding section title */
+    .section-title-wrap { padding: 14px 16px 0 !important; }
+
+    /* Quick ref grid → single column */
+    .quick-ref-grid { grid-template-columns: 1fr !important; }
+
+    /* Infographic cards */
+    .infographic-cards { flex-direction: column !important; align-items: stretch !important; padding: 16px 0 8px !important; }
+    .infographic-cards > div { width: 100% !important; }
+    .infographic-arrow { transform: rotate(90deg); margin: 4px auto !important; }
+
+    /* Pill strips (task 12) */
+    .pill-strip-num { width: 56px !important; }
+    .pill-strip-num span { font-size: 20px !important; }
+
+    /* Bottom padding so content isn't hidden behind nav */
+    .layout-content { padding-bottom: 72px !important; }
+
+    /* Quick ref section padding */
+    #quick-ref-section { padding: 24px 16px 80px !important; }
+
+    /* Header bar */
+    .tasks-header-bar { padding: 14px 16px 10px !important; }
+  }
+
+  /* ── Very small screens ── */
+  @media (max-width: 380px) {
+    .task-stripe { width: 60px !important; }
+    .task-title { font-size: 13px !important; }
+    .hero h1 { font-size: 18px; }
+    .stat-card { padding: 6px 10px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="hero-badge">فريق الدعم الفني المركزي</div>
+  <h1>مهام فريق الدعم الفني المركزي</h1>
+  <p class="hero-sub">منظومة متكاملة من الأنظمة والخطط الرقمية لدعم التعلم عن بعد</p>
+  <div class="stats-row">
+    <div class="stat-card">
+      <span class="stat-icon">🏫</span>
+      <span class="stat-label">مجتمعاً تعليمياً</span>
+      <span class="stat-num" data-target="282" id="cnt1">0</span>
+    </div>
+    <div class="stat-card">
+      <span class="stat-icon">💬</span>
+      <span class="stat-label">مجموعة واتس آب</span>
+      <span class="stat-num" data-target="7242" id="cnt2">0</span>
+    </div>
+    <div class="stat-card">
+      <span class="stat-icon">📋</span>
+      <span class="stat-label">مهمة رئيسية</span>
+      <span class="stat-num" data-target="13" id="cnt3">0</span>
+    </div>
+    <div class="stat-card">
+      <span class="stat-icon">👥</span>
+      <span class="stat-label">أعضاء في الفريق</span>
+      <span class="stat-num" data-target="6" id="cnt4">0</span>
+    </div>
+  </div>
+</header>
+
+<!-- LAYOUT: Sidebar + Content -->
+<div class="layout-flex" style="display:flex; direction:rtl; align-items:stretch; flex:1; min-height:0;">
+
+  <!-- القائمة الجانبية اليمين -->
+  <div id="sidebar" style="width:240px; flex-shrink:0; background:#1a3a6e; display:flex; flex-direction:column; position:sticky; top:0; height:100vh; overflow-y:auto;">
+    <div style="padding:13px 14px; border-bottom:1px solid rgba(255,255,255,0.12); display:flex; align-items:center; gap:8px;">
+      <div class="sidebar-title-text" style="font-size:16px; font-weight:700; color:rgba(255,255,255,0.85); white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">مهام فريق الدعم المركزي</div>
+    </div>
+    <div style="flex:1; overflow-y:auto;">
+      <a href="#t1" onclick="showTask('t1',this)" class="nav-link active-link">
+        <div class="nb" style="background:#2059a8">1</div><span class="nav-label">المهمة الأولى</span>
+      </a>
+      <a href="#t2" onclick="showTask('t2',this)" class="nav-link">
+        <div class="nb" style="background:#1a7d6e">2</div><span class="nav-label">المهمة الثانية</span>
+      </a>
+      <a href="#t3" onclick="showTask('t3',this)" class="nav-link">
+        <div class="nb" style="background:#5e3a9e">3</div><span class="nav-label">المهمة الثالثة</span>
+      </a>
+      <a href="#t4" onclick="showTask('t4',this)" class="nav-link">
+        <div class="nb" style="background:#b07800">4</div><span class="nav-label">المهمة الرابعة</span>
+      </a>
+      <a href="#t5" onclick="showTask('t5',this)" class="nav-link">
+        <div class="nb" style="background:#b03030">5</div><span class="nav-label">المهمة الخامسة</span>
+      </a>
+      <a href="#t6" onclick="showTask('t6',this)" class="nav-link">
+        <div class="nb" style="background:#2e8b3e">6</div><span class="nav-label">المهمة السادسة</span>
+      </a>
+      <a href="#t7" onclick="showTask('t7',this)" class="nav-link">
+        <div class="nb" style="background:#0e5c8a">7</div><span class="nav-label">المهمة السابعة</span>
+      </a>
+      <a href="#t8" onclick="showTask('t8',this)" class="nav-link">
+        <div class="nb" style="background:#4a2080">8</div><span class="nav-label">المهمة الثامنة</span>
+      </a>
+      <a href="#t9" onclick="showTask('t9',this)" class="nav-link">
+        <div class="nb" style="background:#8a2e10">9</div><span class="nav-label">المهمة التاسعة</span>
+      </a>
+      <a href="#t10" onclick="showTask('t10',this)" class="nav-link">
+        <div class="nb" style="background:#1a3a6e">10</div><span class="nav-label">المهمة العاشرة</span>
+      </a>
+      <a href="#t11" onclick="showTask('t11',this)" class="nav-link">
+        <div class="nb" style="background:#2e8b3e">11</div><span class="nav-label">المهمة الحادية عشرة</span>
+      </a>
+      <a href="#t12" onclick="showTask('t12',this)" class="nav-link">
+        <div class="nb" style="background:#1c5a9e">12</div><span class="nav-label">المهمة الثانية عشرة</span>
+      </a>
+      <a href="#t13" onclick="showTask('t13',this)" class="nav-link">
+        <div class="nb" style="background:#7a1a80">13</div><span class="nav-label">المهمة الثالثة عشرة</span>
+      </a>
+      <div style="height:1px; background:rgba(255,255,255,0.1); margin:8px 12px;"></div>
+      <a href="#quick-ref" onclick="showQuickRef(this)" class="nav-link">
+        <div class="nb" style="background:#1a7d6e; font-size:8px;">⚙️</div><span class="nav-label">مرجع سريع</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- منطقة المحتوى -->
+  <div class="layout-content" style="flex:1; min-width:0; display:flex; flex-direction:column;">
+    <div class="tasks-header-bar" style="padding:22px 32px 12px; background:#f4f8fd; border-bottom:1px solid #c8d9ee; display:flex; align-items:center; gap:10px;">
+      <div style="width:4px; height:22px; background:#3b9fd4; border-radius:3px; flex-shrink:0;"></div>
+      <div style="font-size:17px; font-weight:700; color:#1a3a6e;">المهام التفصيلية</div>
+    </div>
+
+    <div class="container">
+      <div class="task-grid">
+
+    <!-- TASK 1 -->
+    <div class="task-card" id="t1">
+      <div class="task-header" onclick="toggle('t1')">
+        <div class="task-stripe c1">
+          <div class="task-ordinal">المهمة</div>
+          <div class="task-ordinal-name">الأولى</div>
+        </div>
+        <div class="task-header-content">
+          <div class="task-title-wrap">
+            <div class="task-title">إدارة مجتمعات الواتس آب التعليمية</div>
+            <div class="task-meta">282 مجتمعاً · 7242 مجموعة · 11 منطقة تعليمية</div>
+          </div>
+          <div class="task-toggle">▾</div>
+        </div>
+      </div>
+      <div class="task-body">
+
+        <!-- النص التمهيدي -->
+        <div class="intro-text">
+          <strong>بعد أن <span style="color:#d90429;">تم إنشاء 282 مجتمعاً تعليمياً على الواتس آب</span> حيث مثل كل مجتمع مدرسة، بحيث ضمت تلك المجتمعات <span style="color:#d90429;">7242 مجموعةً على الواتس آب،</span> تم تنفيذ التالي:</strong>
+        </div>
+
+        <!-- أولاً: توزيع المناطق -->
+        <div class="sub-section">
+          <div class="sub-title"><span class="dot" style="background:#1c6faf"></span><strong><u>أولاً: توزيع المناطق التعليمية على فريق الدعم الفني المركزي كالتالي:</u></strong></div>
+          <div style="overflow-x:auto; border-radius:12px; border:1px solid var(--border); box-shadow:0 2px 14px rgba(28,111,175,0.09);">
+            <table style="width:100%; border-collapse:collapse; font-size:13px; min-width:860px;">
+              <tbody>
+                <tr>
+                  <td style="background:linear-gradient(135deg,#1a3a6e,#1c6faf); color:#fff; font-weight:700; font-size:12.5px; padding:13px 12px; text-align:center; white-space:nowrap; border-left:1px solid rgba(255,255,255,0.18); border-bottom:1px solid rgba(255,255,255,0.15);">المنطقة<br>التعليمية</td>
+                  <td style="background:linear-gradient(135deg,#1a3a6e,#1c6faf); color:#fff; font-weight:600; font-size:12px; padding:13px 10px; text-align:center; border-left:1px solid rgba(255,255,255,0.18); border-bottom:1px solid rgba(255,255,255,0.15);">بيت لاهيا<br>وبيت حانون</td>
+                  <td style="background:linear-gradient(135deg,#1a3a6e,#1c6faf); color:#fff; font-weight:600; font-size:12px; padding:13px 10px; text-align:center; border-left:1px solid rgba(255,255,255,0.18); border-bottom:1px solid rgba(255,255,255,0.15);">جباليا</td>
+                  <td style="background:linear-gradient(135deg,#1a3a6e,#1c6faf); color:#fff; font-weight:600; font-size:12px; padding:13px 10px; text-align:center; border-left:1px solid rgba(255,255,255,0.18); border-bottom:1px solid rgba(255,255,255,0.15);">شرق غزة</td>
+                  <td style="background:linear-gradient(135deg,#1a3a6e,#1c6faf); color:#fff; font-weight:600; font-size:12px; padding:13px 10px; text-align:center; border-left:1px solid rgba(255,255,255,0.18); border-bottom:1px solid rgba(255,255,255,0.15);">غرب غزة</td>
+                  <td style="background:linear-gradient(135deg,#1a3a6e,#1c6faf); color:#fff; font-weight:600; font-size:12px; padding:13px 10px; text-align:center; border-left:1px solid rgba(255,255,255,0.18); border-bottom:1px solid rgba(255,255,255,0.15);">جنوب غزة</td>
+                  <td style="background:linear-gradient(135deg,#1a3a6e,#1c6faf); color:#fff; font-weight:600; font-size:12px; padding:13px 10px; text-align:center; border-left:1px solid rgba(255,255,255,0.18); border-bottom:1px solid rgba(255,255,255,0.15);">شرق<br>الوسطى</td>
+                  <td style="background:linear-gradient(135deg,#1a3a6e,#1c6faf); color:#fff; font-weight:600; font-size:12px; padding:13px 10px; text-align:center; border-left:1px solid rgba(255,255,255,0.18); border-bottom:1px solid rgba(255,255,255,0.15);">غرب<br>الوسطى</td>
+                  <td style="background:linear-gradient(135deg,#1a3a6e,#1c6faf); color:#fff; font-weight:600; font-size:12px; padding:13px 10px; text-align:center; border-left:1px solid rgba(255,255,255,0.18); border-bottom:1px solid rgba(255,255,255,0.15);">شرق<br>خان يونس</td>
+                  <td style="background:linear-gradient(135deg,#1a3a6e,#1c6faf); color:#fff; font-weight:600; font-size:12px; padding:13px 10px; text-align:center; border-left:1px solid rgba(255,255,255,0.18); border-bottom:1px solid rgba(255,255,255,0.15);">غرب<br>خان يونس</td>
+                  <td style="background:linear-gradient(135deg,#1a3a6e,#1c6faf); color:#fff; font-weight:600; font-size:12px; padding:13px 10px; text-align:center; border-left:1px solid rgba(255,255,255,0.18); border-bottom:1px solid rgba(255,255,255,0.15);">شمال رفح</td>
+                  <td style="background:linear-gradient(135deg,#1a3a6e,#1c6faf); color:#fff; font-weight:600; font-size:12px; padding:13px 10px; text-align:center; border-bottom:1px solid rgba(255,255,255,0.15);">جنوب رفح</td>
+                </tr>
+                <tr>
+                  <td style="background:#e8f4fb; color:#1a3a6e; font-weight:700; font-size:12.5px; padding:14px 12px; text-align:center; border-left:1px solid #dce9f5; white-space:nowrap;">العضو<br>المسؤول</td>
+                  <td style="padding:14px 10px; text-align:center; border-left:1px solid #e8eef8; font-size:13px; color:var(--text); font-weight:600;">رقية الزيان</td>
+                  <td style="padding:14px 10px; text-align:center; border-left:1px solid #e8eef8; font-size:13px; color:var(--text); font-weight:600;">مها عامر</td>
+                  <td style="padding:14px 10px; text-align:center; border-left:1px solid #e8eef8; font-size:13px; color:var(--text); font-weight:600;">محمد أمين</td>
+                  <td style="padding:14px 10px; text-align:center; border-left:1px solid #e8eef8; font-size:13px; color:var(--text); font-weight:600;">مها عامر</td>
+                  <td style="padding:14px 10px; text-align:center; border-left:1px solid #e8eef8; font-size:13px; color:var(--text); font-weight:600;">ماهر الزعلان</td>
+                  <td style="padding:14px 10px; text-align:center; border-left:1px solid #e8eef8; font-size:13px; color:var(--text); font-weight:600;">رقية الزيان</td>
+                  <td style="padding:14px 10px; text-align:center; border-left:1px solid #e8eef8; font-size:13px; color:var(--text); font-weight:600;">ماهر الزعلان</td>
+                  <td style="padding:14px 10px; text-align:center; border-left:1px solid #e8eef8; font-size:13px; color:var(--text); font-weight:600;">جهاد الزيناتي</td>
+                  <td style="padding:14px 10px; text-align:center; border-left:1px solid #e8eef8; font-size:13px; color:var(--text); font-weight:600;">جهاد الزيناتي</td>
+                  <td style="padding:14px 10px; text-align:center; border-left:1px solid #e8eef8; font-size:13px; color:var(--text); font-weight:600;">إيمان مخيرز</td>
+                  <td style="padding:14px 10px; text-align:center; font-size:13px; color:var(--text); font-weight:600;">إيمان مخيرز</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- مهمة الأعضاء -->
+        <div class="sub-section">
+          <div class="sub-title"><span class="dot" style="background:#1c6faf"></span><strong><u>مهمة الأعضاء في إدارة مجتمعات الواتس آب التعليمية:</u></strong></div>
+          <p style="font-size:14px;color:var(--text);margin-bottom:10px;"><strong style="color:#d90429;">وتتمثل مهمة كل عضو من الأعضاء السابقين في:</strong></p>
+          <ul class="content-list">
+            <li>متابعة مجتمعات التعلم على الواتس آب الخاصة بمناطقهم من حيث مطابقة التشكيل المدرسي بين الواتس آب والايميس.</li>
+            <li>متابعة مجموعات الواتس آب من حيث الاختراقات وتحديث الروابط بشكل دائم.</li>
+          </ul>
+        </div>
+
+        <!-- ولتسهيل المهام -->
+        <div class="sub-section">
+          <div class="sub-title"><span class="dot" style="background:#1a7d6e"></span><strong><u>ولتسهيل المهام السابقة تم:</u></strong></div>
+          <div class="intro-text" style="margin-bottom:0;">
+            <strong style="color:#d90429;">إنشاء مجتمعاً لمعلمي الدعم الفني على الواتس آب، ضم هذا المجتمع 11 مجموعة مثلت كل مجموعة منطقة تعليمية،</strong> وكل مدرسة في المنطقة يمثلها معلماً للدعم الفني، بحيث يتاح لكافة معلمي الدعم الفني التواصل بشكل مباشر من خلال مجموعاتهم للدعم الفني مع الأعضاء المسؤولين من معلمي الدعم الفني المركزي وذلك من خلال طرح مشكلاتهم والمناقشة فيها.
+          </div>
+        </div>
+
+        <!-- ثانياً: الأدلة الإرشادية -->
+        <div class="sub-section">
+          <div class="sub-title"><span class="dot" style="background:#1c6faf"></span><strong><u>ثانياً: الأدلة الإرشادية المعدة:</u></strong></div>
+          <div style="display:flex; flex-direction:column; gap:9px;">
+
+            <div style="display:flex; align-items:flex-start; gap:12px; padding:11px 14px; background:var(--surface2); border-radius:9px; border:1px solid var(--border); flex-wrap:wrap;">
+              <span style="font-size:13.5px; color:var(--text); flex:1; min-width:200px; line-height:1.75;"><strong>دليل حول إدارة مجتمعات التعلم المدرسية من خلال الواتس آب</strong>: <span style="font-weight:400;">تضمن هذا الدليل خطوات مصورة العديد من المهارات كإنشاء المجموعات المخفية، وتعيين المشرفين، والتحكم في الأذونات وغيرها.</span></span>
+              <a href="https://drive.google.com/file/d/1AGY59CfvN_POHod0lVtgsZtMEEcxoDat/view?usp=sharing" target="_blank" title="فتح الدليل" class="clip-btn" style="flex-shrink:0; align-self:center;">📎</a>
+            </div>
+
+            <div style="display:flex; align-items:flex-start; gap:12px; padding:11px 14px; background:var(--surface2); border-radius:9px; border:1px solid var(--border); flex-wrap:wrap;">
+              <span style="font-size:13.5px; color:var(--text); flex:1; min-width:200px; line-height:1.75;"><strong>دليل إرشادي لاستخدام مجتمعات واتس آب في التعلم عن بعد</strong>: <span style="font-weight:400;">تضمن دور كل من المدير، ومشرفي المجموعات، ومعلمي المواد الأساسية، وجداول فتح المجموعات.. إلخ.</span></span>
+              <a href="https://drive.google.com/file/d/1Eu04Eb2r4k3LUlA5Egr0TG3Dt_2xF12q/view?usp=sharing" target="_blank" title="فتح الدليل" class="clip-btn" style="flex-shrink:0; align-self:center;">📎</a>
+            </div>
+
+            <div style="display:flex; align-items:flex-start; gap:12px; padding:11px 14px; background:var(--surface2); border-radius:9px; border:1px solid var(--border); flex-wrap:wrap;">
+              <span style="font-size:13.5px; color:var(--text); flex:1; min-width:200px; line-height:1.75;"><strong>دليل تعليمات تشكيل العام الدراسي الجديد 2025-2026</strong>: <span style="font-weight:400;">تم نشره للمدارس لتسهيل التعامل مع نظام إدارة روابط مجموعات الواتس آب للعام الجديد.</span></span>
+              <a href="https://drive.google.com/file/d/1Cmwpj2lbDJ1nnTM3JEJV0mQlEqT5ExCp/view?usp=sharing" target="_blank" title="فتح الدليل" class="clip-btn" style="flex-shrink:0; align-self:center;">📎</a>
+            </div>
+
+            <!--<div style="display:flex; align-items:flex-start; gap:12px; padding:11px 14px; background:var(--surface2); border-radius:9px; border:1px solid var(--border); flex-wrap:wrap;">
+              <span style="font-size:13.5px; color:var(--text); flex:1; min-width:200px; line-height:1.75;"><strong>دليل استبانة:</strong> دليل مخصص للاستبانة وآلية التعامل معها.</span>
+              <a href="https://drive.google.com/file/d/1ohNxurncvppcagFfnFtkGbOGJR1geUv5/view?usp=sharing" target="_blank" title="فتح الدليل" class="clip-btn" style="flex-shrink:0; align-self:center;">📎</a>
+            </div>-->
+
+            <div style="display:flex; align-items:flex-start; gap:12px; padding:11px 14px; background:var(--surface2); border-radius:9px; border:1px solid var(--border); flex-wrap:wrap;">
+              <span style="font-size:13.5px; color:var(--text); flex:1; min-width:200px; line-height:1.75;"><strong>دليل نظام التشكيل المدرسي الجديد</strong>: <span style="font-weight:400;">رابط نظام التشكيل المدرسي الجديد للوصول السريع.</span></span>
+              <a href="https://script.google.com/macros/s/AKfycbwpvgYZGUr5xrenLYfCfBFWuoKnNHIieWhZk5AnPtgv8c3VQIw3qY18-RuyE557JNWc/exec" target="_blank" title="فتح الدليل" class="clip-btn" style="flex-shrink:0; align-self:center;">📎</a>
+            </div>
+
+            <div style="display:flex; align-items:flex-start; gap:12px; padding:11px 14px; background:var(--surface2); border-radius:9px; border:1px solid var(--border); flex-wrap:wrap;">
+              <span style="font-size:13.5px; color:var(--text); flex:1; min-width:200px; line-height:1.75;"><strong>دليل حول توجيهات عامة حول الدور الفني للمعلمين في التعلم عن بعد.</strong></span>
+              <a href="https://drive.google.com/file/d/1IdAtVsxincE_nNnnaQVWSEalfcvAKN-M/view?usp=sharing" target="_blank" title="فتح الدليل" class="clip-btn" style="flex-shrink:0; align-self:center;">📎</a>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- ثالثاً: الأنظمة الذكية -->
+        <div class="sub-section">
+          <div class="sub-title"><span class="dot" style="background:#5e3a9e"></span><strong><u>ثالثاً: الأنظمة الذكية المطورة:</u></strong></div>
+          <div class="intro-text">
+            <strong>تم تصميم مجموعة من الأنظمة التي تعتبر بمثابة "المحرك الذكي" الذي يسمح بمتابعة هذا العدد الهائل من المجموعات بدقة متناهية،</strong> مما حول العمل من جهد بشري مضنٍ إلى عملية تقنية مؤتمتة وسريعة، وذلك من خلال:
+          </div>
+
+          <!-- 1. تكامل البيانات -->
+          <div style="margin-bottom:14px; padding: 14px 18px; background:var(--surface2); border-radius:10px; border:1px solid var(--border);">
+            <p style="font-size:14px; color:var(--text); margin-bottom:12px; line-height:1.85;">
+              <strong style="color:#d90429;">1. تكامل البيانات:</strong> <strong>حيث يتم مطابقة التشكيل المدرسي بين مجموعات الواتس آب ونظام الإيميس (EMIS). هذا يضمن أن البيانات الميدانية تعكس بدقة البيانات الرسمية،</strong> مما يمنع حدوث تعارض بين التشكيلين، ويسهل توزيع المعلمين على مجموعاتهم التعليمية، ولتحقيق ذلك تم تصميم نظام:
+            </p>
+            <div style="display:flex; align-items:center; gap:10px; padding:9px 12px; background:#fff; border-radius:8px; border:1px solid var(--border);">
+              <span style="font-size:13.5px; color:var(--text); flex:1; line-height:1.75;"><strong>نظام إدارة روابط مجموعات الواتس آب للعام الجديد:</strong> <span style="font-weight:400;">والهدف من إنشاءه مطابقة التشكيل المدرسي بين مجموعات الواتس آب والايميس، حيث لا يمكن التعامل مع 7242 مجموعة واتس آب تعليمية يدوياً.</span></span>
+              <a href="https://script.google.com/macros/s/AKfycbwpvgYZGUr5xrenLYfCfBFWuoKnNHIieWhZk5AnPtgv8c3VQIw3qY18-RuyE557JNWc/exec" target="_blank" rel="noopener" title="فتح النظام — نظام إدارة روابط مجموعات الواتس آب للعام الجديد" style="flex-shrink:0; display:inline-flex; align-items:center; gap:5px; background:var(--unrwa-light); border:1px solid var(--unrwa-sky); border-radius:7px; padding:5px 10px; color:var(--unrwa-blue); font-size:12px; font-weight:600; text-decoration:none; white-space:nowrap; transition:background 0.15s;">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.44 11.05-9.19 9.19a6 6 0 0 1-8.49-8.49l8.57-8.57A4 4 0 1 1 18 8.84l-8.59 8.57a2 2 0 0 1-2.83-2.83l8.49-8.48"/></svg>
+                فتح النظام
+              </a>
+            </div>
+          </div>
+
+          <!-- 2. الاستجابة الفورية -->
+          <div style="margin-bottom:14px; padding: 14px 18px; background:var(--surface2); border-radius:10px; border:1px solid var(--border);">
+            <p style="font-size:14px; color:var(--text); margin-bottom:12px; line-height:1.85;">
+              <strong style="color:#d90429;">2. الاستجابة الفورية للمشكلات الطارئة:</strong> أحد أهم أدوار الأنظمة المصممة هو <strong>معالجة المشكلات التي تعيق وصول الطلاب للمحتوى التعليمي، وذلك من خلال تحديث روابط المجموعات أولاً بأول</strong>، حيث أن إعادة تعيين الروابط (Reset) أو حدوث اختراقات كان سيتسبب في انقطاع الطلاب عن مجموعاتهم التعليمية، لذا فقد تم تصميم نظام:
+            </p>
+            <div style="display:flex; align-items:center; gap:10px; padding:9px 12px; background:#fff; border-radius:8px; border:1px solid var(--border);">
+              <span style="font-size:13.5px; color:var(--text); flex:1; line-height:1.75;"><strong>نظام إدارة مجموعات الواتس آب:</strong> <span style="font-weight:400;">لضمان استمرار تسجيل دخول الطلبة عبر صفحة استعلام الايميس، في حال حدوث اختراقات لبعض المجموعات، أو في حال إعادة تعيين الروابط لسبب ما.</span></span>
+              <a href="https://script.google.com/macros/s/AKfycbwHUwJvAZlFn3B1on0RAqRSW25O87ipA-xEkjdiQQvORukfSeE2JnXzgQFf-un-4hx61g/exec" target="_blank" title="فتح النظام" style="flex-shrink:0; display:inline-flex; align-items:center; gap:5px; background:var(--unrwa-light); border:1px solid var(--unrwa-sky); border-radius:7px; padding:5px 10px; color:var(--unrwa-blue); font-size:12px; font-weight:600; text-decoration:none; white-space:nowrap; transition:background 0.15s;">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.44 11.05-9.19 9.19a6 6 0 0 1-8.49-8.49l8.57-8.57A4 4 0 1 1 18 8.84l-8.59 8.57a2 2 0 0 1-2.83-2.83l8.49-8.48"/></svg>
+                فتح النظام
+              </a>
+            </div>
+          </div>
+
+          <!-- 3. التواصل المستمر -->
+          <div style="padding: 14px 18px; background:var(--surface2); border-radius:10px; border:1px solid var(--border);">
+            <p style="font-size:14px; color:var(--text); margin-bottom:12px; line-height:1.85;">
+              <strong style="color:#d90429;">3. التواصل المستمر مع معلمي الدعم الفني في المدارس:</strong> من خلال تصميم مجتمع الدعم الفني، ودليل يتيح لهم الوصول لأي معلم من معلمي الدعم الفني في كافة المناطق.
+            </p>
+            <div style="display:flex; align-items:center; gap:10px; padding:9px 12px; background:#fff; border-radius:8px; border:1px solid var(--border); margin-bottom:10px;">
+              <span style="font-size:13.5px; color:var(--text); flex:1; font-weight:600;">نظام دليل معلمي الدعم الفني</span>
+              <a href="https://script.google.com/macros/s/AKfycbwRGXTYeNStkCCHYQwQvW4upYVdrlEmTUno2dQurrBeMIsj_O2oBI88c43jSlvnlaYNQQ/exec" target="_blank" title="فتح النظام" style="flex-shrink:0; display:inline-flex; align-items:center; gap:5px; background:var(--unrwa-light); border:1px solid var(--unrwa-sky); border-radius:7px; padding:5px 10px; color:var(--unrwa-blue); font-size:12px; font-weight:600; text-decoration:none; white-space:nowrap;">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.44 11.05-9.19 9.19a6 6 0 0 1-8.49-8.49l8.57-8.57A4 4 0 1 1 18 8.84l-8.59 8.57a2 2 0 0 1-2.83-2.83l8.49-8.48"/></svg>
+                فتح النظام
+              </a>
+            </div>
+            <div style="display:flex; align-items:center; gap:10px; padding:9px 12px; background:#fff; border-radius:8px; border:1px solid var(--border);">
+              <span style="font-size:13.5px; color:var(--text); flex:1; font-weight:600;">مجتمع الدعم الفني على الواتس آب</span>
+              <a href="https://chat.whatsapp.com/FKZkDLlB42O51FRTb2CYty" target="_blank" title="الانضمام للمجتمع" style="flex-shrink:0; display:inline-flex; align-items:center; gap:5px; background:#f0fdf4; border:1px solid #86efac; border-radius:7px; padding:5px 10px; color:#15803d; font-size:12px; font-weight:600; text-decoration:none; white-space:nowrap;">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.44 11.05-9.19 9.19a6 6 0 0 1-8.49-8.49l8.57-8.57A4 4 0 1 1 18 8.84l-8.59 8.57a2 2 0 0 1-2.83-2.83l8.49-8.48"/></svg>
+                الانضمام
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- TASK 2 -->
+    <div class="task-card" id="t2">
+      <div class="task-header" onclick="toggle('t2')">
+        <div class="task-stripe c2">
+          <div class="task-ordinal">المهمة</div>
+          <div class="task-ordinal-name">الثانية</div>
+        </div>
+        <div class="task-header-content">
+          <div class="task-title-wrap">
+            <div class="task-title">تجهيز قوالب الخطط الفصلية (Online) للتعلم عن بعد وروتينات التعلم</div>
+            <div class="task-meta">لكافة المراحل والمباحث الدراسية · رابط موحّد لجميع المختصين</div>
+          </div>
+          <div class="task-toggle">▾</div>
+        </div>
+      </div>
+      <div class="task-body">
+
+        <!-- النص التمهيدي -->
+        <div class="intro-text">
+          <strong>حيث تم تجهيز قوالب الخطط الفصلية (Online) الخاصة بخطط التعلم عن بعد، وخطط روتينات التعلم،</strong> وذلك بهدف أتمتتها لضمان سلاسة وصول المختصين لقوالب الخطط، وتركيز العمل في رابط واحد يخدم جميع المختصين، مما يعزز من قدرة معلمي الدعم المركزي على المتابعة الدورية، والتحقق من الإنجاز، وتقديم الدعم الفني اللازم.
+        </div>
+
+        <!-- القوالب والروابط -->
+        <div class="sub-section">
+          <div style="display:flex; flex-direction:column; gap:9px;">
+
+            <div style="display:flex; align-items:center; gap:12px; padding:11px 14px; background:var(--surface2); border-radius:9px; border:1px solid var(--border);">
+              <span style="font-size:13.5px; color:var(--text); flex:1; line-height:1.75;"><strong>الخطة الفصلية العامة للتعلم عن بعد:</strong> حيث صُممت الخطة بناءً على محتويات بطاقات التعلم الذاتي.</span>
+              <a href="https://docs.google.com/spreadsheets/d/18BaYg0buT0NxysK6mRK3H28mKJAgmjEEIMCv8ArR9Uc/edit?gid=456455669" target="_blank" title="فتح الخطة" class="clip-btn">📎</a>
+            </div>
+
+            <div style="display:flex; align-items:center; gap:12px; padding:11px 14px; background:var(--surface2); border-radius:9px; border:1px solid var(--border);">
+              <span style="font-size:13.5px; color:var(--text); flex:1; line-height:1.75;"><strong>الخطة الفصلية لروتينات التعلم:</strong> حيث صُممت الخطة بناءً على عدد الجلسات التعليمية الخاصة بكل مرحلة دراسية وكل مادة.</span>
+              <a href="https://docs.google.com/spreadsheets/d/1jgYR8oXJUbj5nRSN_qmHqQ4rTLq7RmkuIXuNQvCIp6c/edit?gid=456455669" target="_blank" title="فتح الخطة" class="clip-btn">📎</a>
+            </div>
+
+            <div style="display:flex; align-items:center; gap:12px; padding:11px 14px; background:var(--surface2); border-radius:9px; border:1px solid var(--border);">
+              <span style="font-size:13.5px; color:var(--text); flex:1; line-height:1.75;">لتسهيل عمل المختصين تم جمع كافة الروابط الهامة والخاصة بهم في صفحة واحدة لتسهيل الوصول إليها.</span>
+              <a href="https://script.google.com/macros/s/AKfycbypk4kQZo3v-Hy8Jt7vKtgieSf15S_Ehft_4sV_lvpONmbs7Ov43alTUUVJdp5uBRe-/exec" target="_blank" title="فتح الصفحة" class="clip-btn">📎</a>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- TASK 3 -->
+    <div class="task-card" id="t3">
+      <div class="task-header" onclick="toggle('t3')">
+        <div class="task-stripe c3">
+          <div class="task-ordinal">المهمة</div>
+          <div class="task-ordinal-name">الثالثة</div>
+        </div>
+        <div class="task-header-content">
+          <div class="task-title-wrap">
+            <div class="task-title">تجزئة المواد التعليمية</div>
+            <div class="task-meta">مراجعة ← تجزئة ← مطابقة مع الخطة الفصلية ← رفع على الدرايف</div>
+          </div>
+          <div class="task-toggle">▾</div>
+        </div>
+      </div>
+      <div class="task-body">
+
+        <!-- النص التمهيدي -->
+        <div class="intro-text">
+          بدايةً يتم مراجعة المواد التعليمية قبل الشروع في تجزئتها والتأكد من صحة ترقيمها، ومن مطابقتها للفهرس، ومن خلوها من بعض المشكلات الفنية، ومن ثم البدء في تجزئة المواد التعليمية وفقاً للخطة الفصلية للتعلم عن بعد بشكل شهري، وذلك من خلال:
+        </div>
+
+        <!-- أولاً: جدول التجزئة أفقي -->
+        <div class="sub-section">
+          <div class="sub-title"><span class="dot" style="background:#7c3aed"></span><strong><u>أولاً: تم توزيع المواد الدراسية على أعضاء الفريق ليتم تجزئتها:</u></strong></div>
+          <div style="overflow-x:auto; border-radius:12px; border:1px solid var(--border); box-shadow:0 2px 14px rgba(28,111,175,0.09);">
+            <table style="width:100%; border-collapse:collapse; font-size:13px; min-width:500px;">
+              <tbody>
+                <tr>
+                  <td style="background:linear-gradient(135deg,#5e3a9e,#7254c8); color:#fff; font-weight:700; font-size:12.5px; padding:13px 14px; text-align:center; border-left:1px solid rgba(255,255,255,0.18); border-bottom:1px solid rgba(255,255,255,0.15); white-space:nowrap;">المادة</td>
+                  <td style="background:linear-gradient(135deg,#5e3a9e,#7254c8); color:#fff; font-weight:600; font-size:12px; padding:13px 14px; text-align:center; border-left:1px solid rgba(255,255,255,0.18); border-bottom:1px solid rgba(255,255,255,0.15);">اللغة العربية</td>
+                  <td style="background:linear-gradient(135deg,#5e3a9e,#7254c8); color:#fff; font-weight:600; font-size:12px; padding:13px 14px; text-align:center; border-left:1px solid rgba(255,255,255,0.18); border-bottom:1px solid rgba(255,255,255,0.15);">الرياضيات</td>
+                  <td style="background:linear-gradient(135deg,#5e3a9e,#7254c8); color:#fff; font-weight:600; font-size:12px; padding:13px 14px; text-align:center; border-left:1px solid rgba(255,255,255,0.18); border-bottom:1px solid rgba(255,255,255,0.15);">العلوم</td>
+                  <td style="background:linear-gradient(135deg,#5e3a9e,#7254c8); color:#fff; font-weight:600; font-size:12px; padding:13px 14px; text-align:center; border-bottom:1px solid rgba(255,255,255,0.15);">اللغة الإنجليزية</td>
+                </tr>
+                <tr>
+                  <td style="background:#ede9fe; color:#5b21b6; font-weight:700; font-size:12.5px; padding:14px 14px; text-align:center; border-left:1px solid #ddd6fe; white-space:nowrap;">المسؤول عن التجزئة</td>
+                  <td style="padding:14px 14px; text-align:center; border-left:1px solid #e8eef8; font-size:13px; color:var(--text); font-weight:600;">إيمان مخيرز – جهاد الزيناتي</td>
+                  <td style="padding:14px 14px; text-align:center; border-left:1px solid #e8eef8; font-size:13px; color:var(--text); font-weight:600;">رقية الزيان</td>
+                  <td style="padding:14px 14px; text-align:center; border-left:1px solid #e8eef8; font-size:13px; color:var(--text); font-weight:600;">مها عامر</td>
+                  <td style="padding:14px 14px; text-align:center; font-size:13px; color:var(--text); font-weight:600;">محمد أمين – ماهر الزعلان</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- ثانياً: جدول المراجعة أفقي -->
+        <div class="sub-section">
+          <div class="sub-title"><span class="dot" style="background:#7c3aed"></span><strong><u>ثانياً: مراجعة المواد المجزئة ومطابقتها مع الخطة الفصلية تمهيداً لرفعها على الدرايف:</u></strong></div>
+          <p style="font-size:14px; color:var(--text); margin-bottom:12px;">وفيما يلي جدول مراجعة تجزئة المواد التعليمية:</p>
+          <div style="overflow-x:auto; border-radius:12px; border:1px solid var(--border); box-shadow:0 2px 14px rgba(28,111,175,0.09);">
+            <table style="width:100%; border-collapse:collapse; font-size:13px; min-width:500px;">
+              <tbody>
+                <tr>
+                  <td style="background:linear-gradient(135deg,#5e3a9e,#7254c8); color:#fff; font-weight:700; font-size:12.5px; padding:13px 14px; text-align:center; border-left:1px solid rgba(255,255,255,0.18); border-bottom:1px solid rgba(255,255,255,0.15); white-space:nowrap;">المادة</td>
+                  <td style="background:linear-gradient(135deg,#5e3a9e,#7254c8); color:#fff; font-weight:600; font-size:12px; padding:13px 14px; text-align:center; border-left:1px solid rgba(255,255,255,0.18); border-bottom:1px solid rgba(255,255,255,0.15);">اللغة العربية</td>
+                  <td style="background:linear-gradient(135deg,#5e3a9e,#7254c8); color:#fff; font-weight:600; font-size:12px; padding:13px 14px; text-align:center; border-left:1px solid rgba(255,255,255,0.18); border-bottom:1px solid rgba(255,255,255,0.15);">الرياضيات</td>
+                  <td style="background:linear-gradient(135deg,#5e3a9e,#7254c8); color:#fff; font-weight:600; font-size:12px; padding:13px 14px; text-align:center; border-left:1px solid rgba(255,255,255,0.18); border-bottom:1px solid rgba(255,255,255,0.15);">العلوم</td>
+                  <td style="background:linear-gradient(135deg,#5e3a9e,#7254c8); color:#fff; font-weight:600; font-size:12px; padding:13px 14px; text-align:center; border-bottom:1px solid rgba(255,255,255,0.15);">اللغة الإنجليزية</td>
+                </tr>
+                <tr>
+                  <td style="background:#ede9fe; color:#5b21b6; font-weight:700; font-size:12.5px; padding:14px 14px; text-align:center; border-left:1px solid #ddd6fe; white-space:nowrap;">المسؤول عن المراجعة</td>
+                  <td style="padding:14px 14px; text-align:center; border-left:1px solid #e8eef8; font-size:13px; color:var(--text); font-weight:600;">محمد أمين</td>
+                  <td style="padding:14px 14px; text-align:center; border-left:1px solid #e8eef8; font-size:13px; color:var(--text); font-weight:600;">مها عامر</td>
+                  <td style="padding:14px 14px; text-align:center; border-left:1px solid #e8eef8; font-size:13px; color:var(--text); font-weight:600;">رقية الزيان</td>
+                  <td style="padding:14px 14px; text-align:center; font-size:13px; color:var(--text); font-weight:600;">إيمان مخيرز – جهاد الزيناتي</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- ثالثاً: النظام الذكي -->
+        <div class="sub-section">
+          <div class="sub-title"><span class="dot" style="background:#7c3aed"></span><strong><u>ثالثاً: الأنظمة الذكية المطورة:</u></strong></div>
+          <div style="display:flex; align-items:center; gap:12px; padding:11px 14px; background:var(--surface2); border-radius:9px; border:1px solid var(--border);">
+            <span style="font-size:13.5px; color:var(--text); flex:1; line-height:1.75;"><strong>نظام تجزئة المواد التعليمية:</strong> <span style="font-weight:normal !important;">تم تطويره لتسهيل عملية التجزئة وضمان صحتها، بحيث يتم تجزئة المواد التعليمية وتسميات الملفات وفقاً لما هو معمول به تلقائياً من خلال النظام.</span></span>
+            <a href="https://script.google.com/macros/s/AKfycbzpUORFdgGJkvwYSsAwIJQtdy0xF3NNNNhEv6FR1BgWkTiuLLc_A0c2FjRhhec6qcVT/exec" target="_blank" title="فتح النظام" style="flex-shrink:0; display:inline-flex; align-items:center; gap:5px; background:var(--unrwa-light); border:1px solid var(--unrwa-sky); border-radius:7px; padding:5px 10px; color:var(--unrwa-blue); font-size:12px; font-weight:600; text-decoration:none; white-space:nowrap; transition:background 0.15s;">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.44 11.05-9.19 9.19a6 6 0 0 1-8.49-8.49l8.57-8.57A4 4 0 1 1 18 8.84l-8.59 8.57a2 2 0 0 1-2.83-2.83l8.49-8.48"/></svg>
+              فتح النظام
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- TASK 4 -->
+    <div class="task-card" id="t4">
+      <div class="task-header" onclick="toggle('t4')">
+        <div class="task-stripe c4">
+          <div class="task-ordinal">المهمة</div>
+          <div class="task-ordinal-name">الرابعة</div>
+        </div>
+        <div class="task-header-content">
+          <div class="task-title-wrap">
+            <div class="task-title">إعداد الخطط الشهرية للتعلم عن بعد</div>
+            <div class="task-meta">9 خطط شهرياً · خطة لكل مرحلة دراسية</div>
+          </div>
+          <div class="task-toggle">▾</div>
+        </div>
+      </div>
+      <div class="task-body">
+
+        <!-- النص التمهيدي -->
+        <div class="intro-text">
+          يتم إعداد خطط التعلم عن بعد الشهرية لكافة المراحل الدراسية، تمهيداً لنشرها عبر مجتمعات التعلم، حيث يتم إعداد 9 خطط بواقع خطة لكل مرحلة دراسية في كل شهر، تتضمن كافة الموضوعات التي سيتم تناولها في هذا الشهر، وذلك من خلال:
+        </div>
+
+        <!-- البنود الثلاثة -->
+        <div class="sub-section">
+          <div class="sub-title"><span class="dot" style="background:#c8941a"></span><strong><u>أولاً: تصميم وتعبئة قوالب خطط التعلم عن بعد (Online) الشهرية:</u></strong></div>
+          <div style="padding:11px 14px; background:linear-gradient(135deg,#fffdf7,#fbf6ea); border-radius:9px; border:1px solid #ead7a9;">
+            <span style="font-size:13.5px; color:var(--text); line-height:1.75;">يتم تصميمها تمهيداً لتعبئتها استناداً للخطة الفصلية للتعلم عن بعد، بحيث تحتوي على عناوين الموضوعات التي ستُدرس في كل أسبوع لكافة المراحل الدراسية على مدار الشهر.</span>
+          </div>
+        </div>
+
+        <div class="sub-section">
+          <div class="sub-title"><span class="dot" style="background:#c8941a"></span><strong><u>ثانياً: إعداد ملفات الوورد الخاصة بالخطط الشهرية:</u></strong></div>
+          <div style="padding:11px 14px; background:linear-gradient(135deg,#fffdf7,#fbf6ea); border-radius:9px; border:1px solid #ead7a9;">
+            <span style="font-size:13.5px; color:var(--text); line-height:1.75;">لكافة المراحل الدراسية.</span>
+          </div>
+        </div>
+
+        <div class="sub-section">
+          <div class="sub-title"><span class="dot" style="background:#c8941a"></span><strong><u>ثالثاً: مراجعة خطط التعلم عن بعد الشهرية:</u></strong></div>
+          <div style="padding:11px 14px; background:linear-gradient(135deg,#fffdf7,#fbf6ea); border-radius:9px; border:1px solid #ead7a9;">
+            <span style="font-size:13.5px; color:var(--text); line-height:1.75;">من حيث مطابقتها لخطط التعلم عن بعد، تمهيداً لرفعها على الدرايف.</span>
+          </div>
+        </div>
+
+        <!-- إنفوجرافيك مستطيلات - من اليمين لليسار -->
+        <div style="display:flex; justify-content:center; align-items:center; gap:14px; padding:30px 10px 14px; direction:rtl; flex-wrap:wrap;">
+
+          <!-- بطاقة 01 - يمين -->
+          <div style="position:relative; width:190px;">
+            <!-- رقم بارز -->
+            <div style="
+              position:absolute; top:-18px; right:16px;
+              width:38px; height:38px; border-radius:50%;
+              background:linear-gradient(165deg,#fffef8 0%,#fcf5e1 100%);
+              border:2.5px solid #b07800;
+              display:flex; align-items:center; justify-content:center;
+              z-index:2;
+              box-shadow:0 3px 10px rgba(176,120,0,0.20);
+            ">
+              <span style="font-size:13px; font-weight:900; color:#b07800;">01</span>
+            </div>
+            <!-- البطاقة -->
+            <div style="
+              background:linear-gradient(165deg,#fffdf7 0%,#fbf1d8 100%);
+              border:1.5px solid #e8d7a8;
+              border-radius:16px;
+              padding:28px 16px 20px;
+              min-height:120px;
+              display:flex; flex-direction:column; justify-content:center; align-items:flex-start;
+              box-shadow:0 4px 18px rgba(176,120,0,0.10);
+              text-align:right;
+            ">
+              <!-- خط لوني أعلى -->
+              <div style="position:absolute;top:0;right:0;left:0;height:4px;background:linear-gradient(90deg,#b07800,#d4a52a);border-radius:16px 16px 0 0;"></div>
+              <div style="font-size:12.5px; font-weight:700; color:#6f5200; line-height:1.75;">
+                تصميم وتعبئة قوالب خطط التعلم عن بعد (Online) الشهرية
+              </div>
+            </div>
+          </div>
+
+          <!-- سهم -->
+          <div style="font-size:20px; color:#d9c27a; flex-shrink:0; margin-top:6px;">&#8592;</div>
+
+          <!-- بطاقة 02 - وسط -->
+          <div style="position:relative; width:190px;">
+            <div style="
+              position:absolute; top:-18px; right:16px;
+              width:38px; height:38px; border-radius:50%;
+              background:linear-gradient(165deg,#fffdf7 0%,#fbf1d8 100%);
+              border:2.5px solid #b07800;
+              display:flex; align-items:center; justify-content:center;
+              z-index:2;
+              box-shadow:0 3px 10px rgba(176,120,0,0.20);
+            ">
+              <span style="font-size:13px; font-weight:900; color:#b07800;">02</span>
+            </div>
+            <div style="
+              background:linear-gradient(165deg,#fffdf7 0%,#fbf1d8 100%);
+              border:1.5px solid #e8d7a8;
+              border-radius:16px;
+              padding:28px 16px 20px;
+              min-height:120px;
+              display:flex; flex-direction:column; justify-content:center; align-items:flex-start;
+              box-shadow:0 4px 18px rgba(176,120,0,0.10);
+              text-align:right;
+              position:relative;
+            ">
+              <div style="position:absolute;top:0;right:0;left:0;height:4px;background:linear-gradient(90deg,#b07800,#d4a52a);border-radius:16px 16px 0 0;"></div>
+              <div style="font-size:12.5px; font-weight:700; color:#6f5200; line-height:1.75;">
+                إعداد ملفات الوورد الخاصة بالخطط الشهرية لكافة المراحل الدراسية
+              </div>
+            </div>
+          </div>
+
+          <!-- سهم -->
+          <div style="font-size:20px; color:#d9c27a; flex-shrink:0; margin-top:6px;">&#8592;</div>
+
+          <!-- بطاقة 03 - يسار -->
+          <div style="position:relative; width:190px;">
+            <div style="
+              position:absolute; top:-18px; right:16px;
+              width:38px; height:38px; border-radius:50%;
+              background:linear-gradient(165deg,#fffdf7 0%,#fbf1d8 100%);
+              border:2.5px solid #b07800;
+              display:flex; align-items:center; justify-content:center;
+              z-index:2;
+              box-shadow:0 3px 10px rgba(176,120,0,0.20);
+            ">
+              <span style="font-size:13px; font-weight:900; color:#b07800;">03</span>
+            </div>
+            <div style="
+              background:linear-gradient(165deg,#fffdf7 0%,#fbf1d8 100%);
+              border:1.5px solid #e8d7a8;
+              border-radius:16px;
+              padding:28px 16px 20px;
+              min-height:120px;
+              display:flex; flex-direction:column; justify-content:center; align-items:flex-start;
+              box-shadow:0 4px 18px rgba(176,120,0,0.10);
+              text-align:right;
+              position:relative;
+            ">
+              <div style="position:absolute;top:0;right:0;left:0;height:4px;background:linear-gradient(90deg,#b07800,#d4a52a);border-radius:16px 16px 0 0;"></div>
+              <div style="font-size:12.5px; font-weight:700; color:#6f5200; line-height:1.75;">
+                مراجعة خطط التعلم عن بعد الشهرية ومطابقتها تمهيداً لرفعها على الدرايف
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+        <!-- TASK 5 -->
+    <div class="task-card" id="t5">
+      <div class="task-header" onclick="toggle('t5')">
+        <div class="task-stripe c5">
+          <div class="task-ordinal">المهمة</div>
+          <div class="task-ordinal-name">الخامسة</div>
+        </div>
+        <div class="task-header-content">
+          <div class="task-title-wrap">
+            <div class="task-title">إعداد خطط التعلم عن بعد الأسبوعية</div>
+            <div class="task-meta">16 خطة أسبوعياً · خطة لكل مرحلة في كل أسبوع</div>
+          </div>
+          <div class="task-toggle">▾</div>
+        </div>
+      </div>
+      <div class="task-body">
+
+        <!-- النص التمهيدي -->
+        <div class="intro-text">
+          يتم بشكل أسبوعي إعداد خطط التعلم عن بعد لكافة المراحل الدراسية، تمهيداً لنشرها عبر مجتمعات التعلم، حيث يتم إعداد (16) خطة أسبوعياً في الفصل الدراسي بواقع خطة لكل مرحلة في كل أسبوع، وذلك من خلال:
+        </div>
+
+        <!-- البنود الثلاثة -->
+        <div class="sub-section">
+          <div class="sub-title"><span class="dot" style="background:var(--accent-coral)"></span><strong><u>أولاً: تصميم وتعبئة قوالب خطط التعلم عن بعد (Online) الأسبوعية:</u></strong></div>
+          <div style="padding:11px 14px; background:linear-gradient(135deg,#fff8f6,#fef0ed); border-radius:9px; border:1px solid #efc2bb;">
+            <span style="font-size:13.5px; color:var(--text); line-height:1.75;">يتم تصميمها تمهيداً لتعبئتها استناداً للخطة الفصلية للتعلم عن بعد، وتضم (16) أسبوعاً، بحيث كل أسبوع يمثل Sheet منفصل ويحتوي كل منهم على المراحل والمواد الدراسية وعناوين الموضوعات التي ستدرس لكل أسبوع.</span>
+          </div>
+        </div>
+
+        <div class="sub-section">
+          <div class="sub-title"><span class="dot" style="background:var(--accent-coral)"></span><strong><u>ثانياً: إعداد ملفات الوورد الخاصة:</u></strong></div>
+          <div style="padding:11px 14px; background:linear-gradient(135deg,#fff8f6,#fef0ed); border-radius:9px; border:1px solid #efc2bb;">
+            <span style="font-size:13.5px; color:var(--text); line-height:1.75;">بخطط التعلم عن بعد لكافة المراحل الدراسية.</span>
+          </div>
+        </div>
+
+        <div class="sub-section">
+          <div class="sub-title"><span class="dot" style="background:var(--accent-coral)"></span><strong><u>ثالثاً: مراجعة خطط التعلم عن بعد:</u></strong></div>
+          <div style="padding:11px 14px; background:linear-gradient(135deg,#fff8f6,#fef0ed); border-radius:9px; border:1px solid #efc2bb;">
+            <span style="font-size:13.5px; color:var(--text); line-height:1.75;">من حيث المحتوى ومطابقتها لخطط التعلم عن بعد وصحة الروابط.</span>
+          </div>
+        </div>
+
+        <!-- إنفوجرافيك مستطيلات - من اليمين لليسار -->
+        <div style="display:flex; justify-content:center; align-items:center; gap:14px; padding:30px 10px 14px; direction:rtl; flex-wrap:wrap;">
+
+          <!-- بطاقة 01 -->
+          <div style="position:relative; width:190px;">
+            <div style="
+              position:absolute; top:-18px; right:16px;
+              width:38px; height:38px; border-radius:50%;
+              background:#fff; border:2.5px solid #b03030;
+              display:flex; align-items:center; justify-content:center;
+              z-index:2; box-shadow:0 3px 10px rgba(176,48,48,0.18);
+            ">
+              <span style="font-size:13px; font-weight:900; color:#b03030;">01</span>
+            </div>
+            <div style="
+              background:linear-gradient(165deg,#fffefe 0%,#fff4f3 100%); border:1.5px solid #e8c0c0;
+              border-radius:16px; padding:28px 16px 20px;
+              min-height:120px; display:flex; flex-direction:column;
+              justify-content:center; align-items:flex-start;
+              box-shadow:0 4px 18px rgba(176,48,48,0.08);
+              text-align:right; position:relative;
+            ">
+              <div style="position:absolute;top:0;right:0;left:0;height:4px;background:linear-gradient(90deg,#b03030,#d46060);border-radius:16px 16px 0 0;"></div>
+              <div style="font-size:12.5px; font-weight:700; color:#7a2020; line-height:1.75;">
+                تصميم وتعبئة قوالب خطط التعلم عن بعد (Online) الأسبوعية
+              </div>
+            </div>
+          </div>
+
+          <!-- سهم -->
+          <div style="font-size:20px; color:#dcc0c0; flex-shrink:0; margin-top:6px;">&#8592;</div>
+
+          <!-- بطاقة 02 -->
+          <div style="position:relative; width:190px;">
+            <div style="
+              position:absolute; top:-18px; right:16px;
+              width:38px; height:38px; border-radius:50%;
+              background:#fff; border:2.5px solid #c0392b;
+              display:flex; align-items:center; justify-content:center;
+              z-index:2; box-shadow:0 3px 10px rgba(192,57,43,0.18);
+            ">
+              <span style="font-size:13px; font-weight:900; color:#c0392b;">02</span>
+            </div>
+            <div style="
+              background:linear-gradient(165deg,#fffdfd 0%,#ffeceb 100%); border:1.5px solid #e0b0a8;
+              border-radius:16px; padding:28px 16px 20px;
+              min-height:120px; display:flex; flex-direction:column;
+              justify-content:center; align-items:flex-start;
+              box-shadow:0 4px 18px rgba(192,57,43,0.08);
+              text-align:right; position:relative;
+            ">
+              <div style="position:absolute;top:0;right:0;left:0;height:4px;background:linear-gradient(90deg,#c0392b,#e06858);border-radius:16px 16px 0 0;"></div>
+              <div style="font-size:12.5px; font-weight:700; color:#7a2020; line-height:1.75;">
+                إعداد ملفات الوورد الخاصة بخطط التعلم عن بعد لكافة المراحل الدراسية
+              </div>
+            </div>
+          </div>
+
+          <!-- سهم -->
+          <div style="font-size:20px; color:#dcc0c0; flex-shrink:0; margin-top:6px;">&#8592;</div>
+
+          <!-- بطاقة 03 -->
+          <div style="position:relative; width:190px;">
+            <div style="
+              position:absolute; top:-18px; right:16px;
+              width:38px; height:38px; border-radius:50%;
+              background:#fff; border:2.5px solid #922b21;
+              display:flex; align-items:center; justify-content:center;
+              z-index:2; box-shadow:0 3px 10px rgba(146,43,33,0.18);
+            ">
+              <span style="font-size:13px; font-weight:900; color:#922b21;">03</span>
+            </div>
+            <div style="
+              background:linear-gradient(165deg,#fffdfd 0%,#ffe7e5 100%); border:1.5px solid #d8a8a0;
+              border-radius:16px; padding:28px 16px 20px;
+              min-height:120px; display:flex; flex-direction:column;
+              justify-content:center; align-items:flex-start;
+              box-shadow:0 4px 18px rgba(146,43,33,0.08);
+              text-align:right; position:relative;
+            ">
+              <div style="position:absolute;top:0;right:0;left:0;height:4px;background:linear-gradient(90deg,#922b21,#c05040);border-radius:16px 16px 0 0;"></div>
+              <div style="font-size:12.5px; font-weight:700; color:#7a2020; line-height:1.75;">
+                مراجعة خطط التعلم عن بعد من حيث المحتوى والمطابقة وصحة الروابط
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+    <!-- TASK 6 -->
+    <div class="task-card" id="t6">
+      <div class="task-header" onclick="toggle('t6')">
+        <div class="task-stripe c6">
+          <div class="task-ordinal">المهمة</div>
+          <div class="task-ordinal-name">السادسة</div>
+        </div>
+        <div class="task-header-content">
+          <div class="task-title-wrap">
+            <div class="task-title">مراجعة المواد على منصة التعلم الذاتي Keeplearning</div>
+            <div class="task-meta">مطابقة المحتوى المرفوع قبل نشر الخطط على المجتمعات</div>
+          </div>
+          <div class="task-toggle">▾</div>
+        </div>
+      </div>
+      <div class="task-body">
+
+        <!-- النص التمهيدي -->
+        <div class="intro-text">
+          بعد أن يتم إعداد خطط التعلم عن بعد، يتم مطابقتها مجدداً مع ما تم رفعه على منصة التعلم الذاتي، قبل نشرها على مجتمعات التعلم.
+        </div>
+
+        <!-- رابط المنصة (بطاقة مميزة) -->
+        <div style="display:flex; align-items:center; gap:12px;">
+          <span style="font-size:13.5px; color:var(--text); flex:1; font-weight:600;">منصة التعلم الذاتي Keeplearning</span>
+          <a href="https://keeplearning.unrwa.org/gaza/" target="_blank" title="فتح المنصة">فتح المنصة</a>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- TASK 7 -->
+    <div class="task-card" id="t7">
+      <div class="task-header" onclick="toggle('t7')">
+        <div class="task-stripe c7">
+          <div class="task-ordinal">المهمة</div>
+          <div class="task-ordinal-name">السابعة</div>
+        </div>
+        <div class="task-header-content">
+          <div class="task-title-wrap">
+            <div class="task-title">إعداد خطط روتينات التعلم</div>
+            <div class="task-meta">9 خطط أسبوعية · 16 خطة لكل مرحلة في الفصل الدراسي</div>
+          </div>
+          <div class="task-toggle">▾</div>
+        </div>
+      </div>
+      <div class="task-body">
+
+        <!-- النص التمهيدي -->
+        <div class="intro-text">
+          <strong>يتم بشكل أسبوعي إعداد خطط روتينات التعلم لكافة المراحل الدراسية،</strong> تمهيداً لنشرها عبر مجتمعات التعلم، حيث <strong>يتم إعداد (9) خطط أسبوعية بواقع (16) خطة لكل مرحلة في الفصل الدراسي،</strong> وذلك من خلال:
+        </div>
+
+        <!-- إنفوجرافيك مستطيلات - من اليمين لليسار (نفس المهمة السابعة) -->
+        <div style="display:flex; justify-content:center; align-items:center; gap:14px; padding:30px 10px 14px; direction:rtl; flex-wrap:wrap;">
+
+          <!-- بطاقة 01 — تدرج أزرق فاتح هادئ -->
+          <div style="position:relative; width:190px;">
+            <div style="
+              position:absolute; top:-18px; right:16px;
+              width:38px; height:38px; border-radius:50%;
+              background:linear-gradient(180deg,#ffffff,#f3f9fd); border:2.5px solid #9cc8e6;
+              display:flex; align-items:center; justify-content:center;
+              z-index:2; box-shadow:0 3px 12px rgba(59,159,212,0.14);
+            ">
+              <span style="font-size:13px; font-weight:900; color:#3a7aa8;">01</span>
+            </div>
+            <div style="
+              background:linear-gradient(165deg,#ffffff 0%,#f7fbff 100%); border:1.5px solid #c2daf0;
+              border-radius:16px; padding:28px 16px 20px;
+              min-height:120px; display:flex; flex-direction:column;
+              justify-content:center; align-items:flex-start;
+              box-shadow:0 4px 18px rgba(59,159,212,0.09);
+              text-align:right; position:relative;
+            ">
+              <div style="position:absolute;top:0;right:0;left:0;height:5px;background:linear-gradient(90deg,#8ec0e6,#b8daf0,#dff0fb);border-radius:16px 16px 0 0;"></div>
+              <div style="font-size:12.5px; font-weight:700; color:#0a3a58; line-height:1.75;">
+                تصميم وتعبئة قوالب خطط روتينات التعلم (Online) استناداً للخطة الفصلية لروتينات التعلم
+              </div>
+            </div>
+          </div>
+
+          <!-- سهم -->
+          <div style="font-size:20px; color:#9ec5e4; flex-shrink:0; margin-top:6px;">&#8592;</div>
+
+          <!-- بطاقة 02 -->
+          <div style="position:relative; width:190px;">
+            <div style="
+              position:absolute; top:-18px; right:16px;
+              width:38px; height:38px; border-radius:50%;
+              background:linear-gradient(180deg,#ffffff,#f3f9fd); border:2.5px solid #9cc8e6;
+              display:flex; align-items:center; justify-content:center;
+              z-index:2; box-shadow:0 3px 12px rgba(59,159,212,0.14);
+            ">
+              <span style="font-size:13px; font-weight:900; color:#3a7aa8;">02</span>
+            </div>
+            <div style="
+              background:linear-gradient(165deg,#ffffff 0%,#f7fbff 100%); border:1.5px solid #c2daf0;
+              border-radius:16px; padding:28px 16px 20px;
+              min-height:120px; display:flex; flex-direction:column;
+              justify-content:center; align-items:flex-start;
+              box-shadow:0 4px 18px rgba(59,159,212,0.09);
+              text-align:right; position:relative;
+            ">
+              <div style="position:absolute;top:0;right:0;left:0;height:5px;background:linear-gradient(90deg,#8ec0e6,#b8daf0,#dff0fb);border-radius:16px 16px 0 0;"></div>
+              <div style="font-size:12.5px; font-weight:700; color:#0a3a58; line-height:1.75;">
+                إعداد ملفات الوورد الخاصة بخطط روتينات التعلم
+              </div>
+            </div>
+          </div>
+
+          <!-- سهم -->
+          <div style="font-size:20px; color:#9ec5e4; flex-shrink:0; margin-top:6px;">&#8592;</div>
+
+          <!-- بطاقة 03 -->
+          <div style="position:relative; width:190px;">
+            <div style="
+              position:absolute; top:-18px; right:16px;
+              width:38px; height:38px; border-radius:50%;
+              background:linear-gradient(180deg,#ffffff,#f3f9fd); border:2.5px solid #9cc8e6;
+              display:flex; align-items:center; justify-content:center;
+              z-index:2; box-shadow:0 3px 12px rgba(59,159,212,0.14);
+            ">
+              <span style="font-size:13px; font-weight:900; color:#3a7aa8;">03</span>
+            </div>
+            <div style="
+              background:linear-gradient(165deg,#ffffff 0%,#f7fbff 100%); border:1.5px solid #c2daf0;
+              border-radius:16px; padding:28px 16px 20px;
+              min-height:120px; display:flex; flex-direction:column;
+              justify-content:center; align-items:flex-start;
+              box-shadow:0 4px 18px rgba(59,159,212,0.09);
+              text-align:right; position:relative;
+            ">
+              <div style="position:absolute;top:0;right:0;left:0;height:5px;background:linear-gradient(90deg,#8ec0e6,#b8daf0,#dff0fb);border-radius:16px 16px 0 0;"></div>
+              <div style="font-size:12.5px; font-weight:700; color:#0a3a58; line-height:1.75;">
+                مراجعة الخطط من حيث صحة المحتوى ومطابقته لخطة روتينات التعلم
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+    <!-- TASK 8 -->
+    <div class="task-card" id="t8">
+      <div class="task-header" onclick="toggle('t8')">
+        <div class="task-stripe c8">
+          <div class="task-ordinal">المهمة</div>
+          <div class="task-ordinal-name">الثامنة</div>
+        </div>
+        <div class="task-header-content">
+          <div class="task-title-wrap">
+            <div class="task-title">تدقيق ملفات روتينات التعلم</div>
+            <div class="task-meta">108 ملفات أسبوعياً · 12 ملفاً لكل مرحلة دراسية · 20 مختصاً</div>
+          </div>
+          <div class="task-toggle">▾</div>
+        </div>
+      </div>
+      <div class="task-body">
+
+        <!-- النص التمهيدي -->
+        <div class="intro-text">
+          <strong>تم تصميم نظام إدارة ملفات روتينات التعلم، حيث يسمح للمختصين برفع ملفاتهم والبالغ عددها (108) ملفاً أسبوعياً، بواقع (12) ملفاً لكل مرحلة دراسية،</strong> والتي تمثل تحضيراً للدروس وفقاً لخطط روتينات التعلم، وذلك تمهيداً لإرسالها للمدارس للاستفادة منها في النقاط التعليمية، ولتسهيل هذه المهمة تم:
+        </div>
+
+        <!-- أولاً: النظام الذكي -->
+        <div class="sub-section">
+          <div class="sub-title"><span class="dot" style="background:#4a2080"></span><strong><u>أولاً: تطوير نظام ذكي:</u></strong></div>
+
+          <div style="margin-bottom:10px; padding:14px 18px; background:var(--surface2); border-radius:10px; border:1px solid var(--border);">
+            <p style="font-size:14px; color:var(--text); margin-bottom:12px; line-height:1.85;">
+              <strong>نظام إدارة ملفات روتينات التعلم:</strong> تم تصميم نظام لإدارة ملفات روتينات التعلم، ويمثل هذا النظام حلقة الوصل التقنية التي تضمن انسيابية العمل بين المختصين وفريق الدعم المركزي، مما يساهم في معالجة التحدي الأكبر المتمثل في متابعة تدفق الملفات المرسلة أسبوعياً من قبل (20) مختصاً، والبالغ عددها (108) ملفاً، حيث يوفر هذا النظام:
+            </p>
+            <div style="display:flex; flex-direction:column; gap:8px; margin-bottom:12px;">
+              <div style="display:flex; align-items:baseline; gap:10px; padding:9px 12px; background:#fff; border-radius:8px; border:1px solid var(--border);">
+                <span style="font-size:13.5px; color:var(--text); flex:1; line-height:1.75;"><strong>منصة رفع مركزية وموحدة:</strong> يتيح للمختصين واجهة بسيطة لرفع ملفاتهم الروتينية دون الحاجة لاستخدام طرق مختلفة (إيميل، واتس آب، ..).</span>
+              </div>
+              <div style="display:flex; align-items:baseline; gap:10px; padding:9px 12px; background:#fff; border-radius:8px; border:1px solid var(--border);">
+                <span style="font-size:13.5px; color:var(--text); flex:1; line-height:1.75;"><strong>الاستجابة الفورية:</strong> يظهر النظام تقريراً تفصيلياً بما تم رفعه من الملفات مما يسهل عملية متابعة رفع الملفات بشكل منتظم، وتحديد مصدر عدم اكتمال الملفات بشكل مباشر وسريع.</span>
+              </div>
+            </div>
+            <div style="display:flex; align-items:center; gap:10px; padding:9px 12px; background:#fff; border-radius:8px; border:1px solid var(--border);">
+              <span style="font-size:13.5px; color:var(--text); flex:1; font-weight:600;">نظام إدارة ملفات روتينات التعلم</span>
+              <a href="https://script.google.com/macros/s/AKfycbx0Hsnnd96U4_bRbSmMtLOI5kt6EmmpDzm_buy4zgqO_I-dCmALfinm2npYeeVBxG1A/exec" target="_blank" title="فتح النظام" style="flex-shrink:0; display:inline-flex; align-items:center; gap:5px; background:var(--unrwa-light); border:1px solid var(--unrwa-sky); border-radius:7px; padding:5px 10px; color:var(--unrwa-blue); font-size:12px; font-weight:600; text-decoration:none; white-space:nowrap;">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.44 11.05-9.19 9.19a6 6 0 0 1-8.49-8.49l8.57-8.57A4 4 0 1 1 18 8.84l-8.59 8.57a2 2 0 0 1-2.83-2.83l8.49-8.48"/></svg>
+                فتح النظام
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- ثانياً: الأدلة الإرشادية -->
+        <div class="sub-section">
+          <div class="sub-title"><span class="dot" style="background:#4a2080"></span><strong><u>ثانياً: الأدلة الإرشادية المعدة:</u></strong></div>
+          <div style="display:flex; flex-direction:column; gap:9px;">
+            <div style="display:flex; align-items:center; gap:12px; padding:11px 14px; background:var(--surface2); border-radius:9px; border:1px solid var(--border);">
+              <span style="font-size:13.5px; color:var(--text); flex:1; line-height:1.75;"><strong>دليل لنظام إدارة روتينات التعلم:</strong><span style="font-weight:400 !important;"> تم إرساله للمختصين لتوضيح كيفية التعامل مع النظام.</span></span>
+              <a href="https://drive.google.com/file/d/1PTYXh5dCVtcTsSBoHVFxbyZ8oagcavBR/view?usp=sharing" target="_blank" title="فتح الدليل" class="clip-btn">📎</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- ثالثاً: المطابقة الأسبوعية -->
+        <div class="sub-section">
+          <div class="sub-title"><span class="dot" style="background:#4a2080"></span><strong><u>ثالثاً: مطابقة ملفات روتينات التعلم مع خطة روتينات التعلم أسبوعياً:</u></strong></div>
+          <div style="padding:13px 16px; background:var(--surface2); border-radius:9px; border:1px solid var(--border); font-size:14px; color:var(--text); line-height:1.85;">
+            بعد اكتمال إرسالها من قبل المختصين، تمهيداً لرفعها على الدرايف، في انتظار الحصول على موافقة HQ... قبل إرسالها للمدارس.
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- TASK 9 -->
+    <div class="task-card" id="t9">
+      <div class="task-header" onclick="toggle('t9')">
+        <div class="task-stripe c9">
+          <div class="task-ordinal">المهمة</div>
+          <div class="task-ordinal-name">التاسعة</div>
+        </div>
+        <div class="task-header-content">
+          <div class="task-title-wrap">
+            <div class="task-title">الاختبارات الشهرية</div>
+            <div class="task-meta">نظام المودل · أدلة الدخول والمراجعة · نظام الاختبارات القديم</div>
+          </div>
+          <div class="task-toggle">▾</div>
+        </div>
+      </div>
+      <div class="task-body">
+
+        <!-- النص التمهيدي -->
+        <div class="intro-text">
+          <strong>يعمل فريق الدعم المركزي على إعداد الاختبارات الشهرية ومراجعتها على نظام المودل، الذي تم اعتماده مؤخراً،</strong> ونظراً لتغيير آلية الدخول للاختبارات عن المعتاد عليه سابقاً تم تصميم مجموعة من الأدلة:
+        </div>
+
+        <!-- إنفوجرافيك pill style -->
+        <div style="display:flex; flex-direction:column; gap:12px; padding:10px 0 8px; direction:rtl;">
+
+          <!-- شريط 01 -->
+          <div style="display:flex; align-items:stretch; border-radius:14px; box-shadow:0 3px 14px rgba(138,40,16,0.14); min-height:76px; ">
+            <div class="pill-strip-num" style="width:72px;flex-shrink:0;/* margin-left: 6px; */margin-left:10px;background:linear-gradient(160deg,#6a1a08,#9a2e10);display:flex;align-items:center;justify-content:center;border-radius: 49px 0 50px 0px;">
+              <span style="font-size:26px; font-weight:900; color:#fff; letter-spacing:-1px;">01</span>
+            </div>
+            <div style="flex:1; background:linear-gradient(90deg,#b03818,#c84a28); padding:14px 22px; display:flex; align-items:center; gap:12px; border-radius:14px 0 0 14px;">
+              <div style="font-size:13px; font-weight:700; color:#fff; flex:1; line-height:1.7;">دليل إرشادات دخول الطالب إلى صفحة الاختبار</div>
+              <a href="https://drive.google.com/file/d/19RRBAymSF2TGglMIk6KhZyLVPGLsKdeV/view?usp=sharing" target="_blank" style="flex-shrink:0; display:inline-flex; align-items:center; gap:4px; background:rgba(255,255,255,0.22); border:1px solid rgba(255,255,255,0.45); border-radius:20px; padding:4px 14px; color:#fff; font-size:11.5px; font-weight:700; text-decoration:none; white-space:nowrap;">
+                فتح الدليل 📎
+              </a>
+            </div>
+          </div>
+
+          <!-- شريط 02 -->
+          <div style="display:flex; align-items:stretch; border-radius:14px; box-shadow:0 3px 14px rgba(138,40,16,0.14); min-height:76px;">
+            <div class="pill-strip-num" style="width:72px;flex-shrink:0;/* margin-left: 6px; */margin-left:10px;background:linear-gradient(160deg,#6a1a08,#9a2e10);display:flex;align-items:center;justify-content:center;border-radius: 0 50px 0 50px;">
+              <span style="font-size:26px; font-weight:900; color:#fff; letter-spacing:-1px;">02</span>
+            </div>
+            <div style="flex:1; background:linear-gradient(90deg,#b03818,#c84a28); padding:14px 22px; display:flex; align-items:center; gap:12px; border-radius:14px 0 0 14px;">
+              <div style="font-size:13px; font-weight:700; color:#fff; flex:1; line-height:1.7;">دليل لمراجعة الاختبارات من قبل المختصين</div>
+              <a href="https://docs.google.com/document/d/1xIlWlv9bQaYImNbVsX8eAMhAYppM5rS6/edit?usp=sharing" target="_blank" style="flex-shrink:0; display:inline-flex; align-items:center; gap:4px; background:rgba(255,255,255,0.22); border:1px solid rgba(255,255,255,0.45); border-radius:20px; padding:4px 14px; color:#fff; font-size:11.5px; font-weight:700; text-decoration:none; white-space:nowrap;">
+                فتح الدليل 📎
+              </a>
+            </div>
+          </div>
+
+          <!-- شريط 03 - ملاحظة النظام القديم -->
+          <div style="display:flex; align-items:stretch; border-radius:14px; box-shadow:0 3px 14px rgba(138,40,16,0.12); min-height:76px;">
+            <div class="pill-strip-num" style="width:72px; flex-shrink:0; background:linear-gradient(160deg,#8a2e10,#b04020); display:flex; align-items:center; justify-content:center; border-radius:0 14px 14px 0;">
+              <span style="font-size:28px;">💡</span>
+            </div>
+            <div style="flex:1; background:#ffffff; border:1px solid #efc5b4; padding:14px 22px; display:flex; align-items:center; gap:12px; flex-wrap:wrap; border-radius:14px 0 0 14px;">
+              <div style="font-size:14px; color:#1a3a6e; font-weight:700; line-height:1.9; flex:1; min-width:180px;">كانت الاختبارات قبل اعتماد المودل تُصمَّم على Google Forms ومن ثم ربطها مع نظام الاختبارات الذي صُمِّم خصيصاً لتسهيل إدارة الاختبارات، كما صُمِّمت بوابة لكل منطقة للدخول للاختبارات لحل العديد من المشكلات التقنية، ولتنظيم الاستجابات.</div>
+              <div style="display:flex; flex-direction:column; gap:7px; flex-shrink:0;">
+                <a href="https://script.google.com/macros/s/AKfycbzuTtRKEUc_ZH53JZ3TOd6EkMqsU4wTscsYVzZ1hiyvNl7zr0AG8-2ZTeQwTiE1qiA5/exec?edit_mode=1" target="_blank" class="no-banner-link" style="display:inline-flex; align-items:center; gap:4px; background:linear-gradient(135deg,#8a2e10,#b04020); border:1px solid #d67656; border-radius:20px; padding:4px 12px; color:#fff; font-size:11px; font-weight:700; text-decoration:none; white-space:nowrap;">
+                  نظام الاختبارات ↗
+                </a>
+                <a href="https://script.google.com/macros/s/AKfycbw4E8ldZZJ3_wOIO_BK8U1_vWXIFgBePzaY2wJbqJsyAbqSfLaIPr6xFRPLWQYgetk/exec?edit_mode=1" target="_blank" class="no-banner-link" style="display:inline-flex; align-items:center; gap:4px; background:linear-gradient(135deg,#8a2e10,#b04020); border:1px solid #d67656; border-radius:20px; padding:4px 12px; color:#fff; font-size:11px; font-weight:700; text-decoration:none; white-space:nowrap;">
+                  بوابة المناطق ↗
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+    <!-- TASK 10 -->
+    <div class="task-card" id="t10">
+      <div class="task-header" onclick="toggle('t10')">
+        <div class="task-stripe c10">
+          <div class="task-ordinal">المهمة</div>
+          <div class="task-ordinal-name">العاشرة</div>
+        </div>
+        <div class="task-header-content">
+          <div class="task-title-wrap">
+            <div class="task-title">إعداد التقارير</div>
+            <div class="task-meta">تقارير الاختبارات الشهرية · التقارير الفصلية والنهائية</div>
+          </div>
+          <div class="task-toggle">▾</div>
+        </div>
+      </div>
+      <div class="task-body">
+
+        <!-- النص التمهيدي -->
+        <div class="intro-text">
+          <strong>يتولى فريق الدعم المركزي إعداد التقارير المرتبطة بالاختبارات والنتائج، وذلك من خلال:</strong>
+        </div>
+
+        <!-- إنفوجرافيك pill style (نفس تنسيق المهمة التاسعة) -->
+        <div style="display:flex; flex-direction:column; gap:8px; padding:8px 0 6px; direction:rtl;">
+
+          <!-- شريط 01 -->
+          <div style="display:flex; align-items:stretch; border-radius:12px; overflow:hidden; box-shadow:0 2px 10px rgba(28,111,175,0.1); height:136px; min-height:136px;">
+            <div class="pill-strip-num" style="width:56px;flex-shrink:0;margin-left:6px;background:linear-gradient(160deg,#143d5e,#1c5f8f);display:flex;align-items:center;justify-content:center;border-radius:0;">
+              <span style="font-size:23px; font-weight:900; color:#fff; letter-spacing:-0.5px;">01</span>
+            </div>
+            <div style="flex:1; background:linear-gradient(135deg,#e8f4fb,#f0f9ff); border:1px solid rgba(26,58,110,0.12); padding:12px 16px; display:flex; flex-direction:column; justify-content:center; gap:6px; border-radius:0; min-height:0; overflow-y:auto;">
+              <div style="font-size:12px; font-weight:700; color:var(--primary); letter-spacing:0.35px;">📊 نوع التقرير</div>
+              <div style="font-size:15px; font-weight:700; color:var(--primary); line-height:1.42;">تقارير الاختبارات الشهرية</div>
+              <div style="font-size:13px; color:var(--text); line-height:1.62;">أثناء تقديم الاختبارات يتم إعداد تقارير إحصائية حول نسب وأسماء الطلبة المتقدمين وغير المتقدمين من الصف الأول حتى التاسع، لمشاركتها مع المدارس لحث الطلبة على الدخول.</div>
+              <div style="font-size:12px; color:var(--text-muted); font-weight:600;">الصف الأول ← التاسع</div>
+            </div>
+          </div>
+
+          <!-- شريط 02 -->
+          <div style="display:flex; align-items:stretch; border-radius:12px; overflow:hidden; box-shadow:0 2px 10px rgba(28,111,175,0.1); height:136px; min-height:136px;">
+            <div class="pill-strip-num" style="width:56px;flex-shrink:0;margin-left:6px;background:linear-gradient(160deg,#143d5e,#1c5f8f);display:flex;align-items:center;justify-content:center;border-radius:0;">
+              <span style="font-size:23px; font-weight:900; color:#fff; letter-spacing:-0.5px;">02</span>
+            </div>
+            <div style="flex:1; background:linear-gradient(135deg,#e8f4fb,#f0f9ff); border:1px solid rgba(26,58,110,0.12); padding:12px 16px; display:flex; flex-direction:column; justify-content:center; gap:6px; border-radius:0; min-height:0; overflow-y:auto;">
+              <div style="font-size:12px; font-weight:700; color:var(--primary); letter-spacing:0.35px;">📈 نوع التقرير</div>
+              <div style="font-size:15px; font-weight:700; color:var(--primary); line-height:1.42;">تقارير النتائج الفصلية والنهائية</div>
+              <div style="font-size:13px; color:var(--text); line-height:1.62;">تجهيز الإحصائيات الدورية والنهائية حول نتائج الاختبارات لكافة الدورات (الدورة الأولى، الثانية، التعويضية) للفصل الدراسي الحالي.</div>
+              <div style="font-size:12px; color:var(--text-muted); font-weight:600;">2025-2026 · كافة الدورات</div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+    <!-- TASK 11 -->
+    <div class="task-card" id="t11">
+      <div class="task-header" onclick="toggle('t11')">
+        <div class="task-stripe c11">
+          <div class="task-ordinal">المهمة</div>
+          <div class="task-ordinal-name">الحادية عشرة</div>
+        </div>
+        <div class="task-header-content">
+          <div class="task-title-wrap">
+            <div class="task-title">إدارة تقارير زيارات المختصين</div>
+            <div class="task-meta">نظام SharePoint · ربط بالأوت لوك · دليلان إرشاديان</div>
+          </div>
+          <div class="task-toggle">▾</div>
+        </div>
+      </div>
+      <div class="task-body">
+
+        <!-- النص التمهيدي -->
+        <div class="intro-text">
+          <strong>تم تصميم نظام إدارة تقارير زيارات المختصين، <span style="color:#d90429;">ويعتبر هذا النظام العمود الفقري لمتابعة الأداء وتحليل البيانات، فهو يربط بين المختصين ومدراء المناطق التعليمية،</span> ويحول بيانات الزيارات إلى معلومات قابلة للاستخدام الفوري لاتخاذ القرارات وتحسين العملية التعليمية، وذلك من خلال:</strong>
+        </div>
+
+        <!-- مميزات النظام الأربع -->
+        <div class="sub-section">
+          <div style="display:flex; flex-direction:column; gap:8px; margin-bottom:6px;">
+            <div style="display:flex; align-items:baseline; gap:10px; padding:10px 15px; background:linear-gradient(135deg,#f0faf9,#e2efec); border-radius:8px; border:1px solid #b5d4cb;">
+              <span style="font-size:14px; color:var(--text); flex:1; line-height:1.78;"><strong>أ. تسجيل زيارات المختصين:</strong> بشكل دقيق سواءً كانت الافتراضية لمجموعات التعلم عبر الواتس آب، أو الفعلية في النقاط التعليمية.</span>
+            </div>
+            <div style="display:flex; align-items:baseline; gap:10px; padding:10px 15px; background:linear-gradient(135deg,#f0faf9,#e2efec); border-radius:8px; border:1px solid #b5d4cb;">
+              <span style="font-size:14px; color:var(--text); flex:1; line-height:1.78;"><strong>ب. متابعة عمل المختصين:</strong> من خلال توثيق الزيارات بشكل مستمر، مما يضمن شفافية ومصداقية متابعة عمل المختصين.</span>
+            </div>
+            <div style="display:flex; align-items:baseline; gap:10px; padding:10px 15px; background:linear-gradient(135deg,#f0faf9,#e2efec); border-radius:8px; border:1px solid #b5d4cb;">
+              <span style="font-size:14px; color:var(--text); flex:1; line-height:1.78;"><strong>ج. ربط التقارير مباشرةً بإيميلات مدراء المناطق:</strong> كافة التقارير المدخلة من قبل المختصين تظهر مباشرة في إيميلات مدراء المناطق، وهذا يتيح متابعة لحظية للزيارات دون الحاجة لتجميعها يدوياً.</span>
+            </div>
+            <div style="display:flex; align-items:baseline; gap:10px; padding:10px 15px; background:linear-gradient(135deg,#f0faf9,#e2efec); border-radius:8px; border:1px solid #b5d4cb;">
+              <span style="font-size:14px; color:var(--text); flex:1; line-height:1.78;"><strong>د. تسهيل إعداد التقارير التجميعية:</strong> من خلال استخراج إحصائيات دقيقة عن عدد الزيارات، مدى التغطية لكل منطقة، ومستوى التفاعل في مجتمعات التعلم.</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- أولاً: النظام الذكي -->
+        <div class="sub-section">
+          <div class="sub-title"><span class="dot" style="background:#2e8b3e"></span><strong><u>أولاً: تطوير نظام ذكي:</u></strong></div>
+          <div style="padding:14px 18px; background:linear-gradient(135deg,#f0faf9,#e2efec); border-radius:10px; border:1px solid #b5d4cb; margin-bottom:4px;">
+            <p style="font-size:14px; color:var(--text); margin-bottom:12px; line-height:1.85;">
+              <strong>نظام إدخال تقارير المختصين للتعليم عن بعد، والتعلم غير الرسمي:</strong> تم تصميمه بهدف تنظيم زيارات المختصين ومتابعتها وعمل الإحصائيات اللازمة، وربط التقارير المدخلة ببرنامج الأوت لوك حيث أن كافة التقارير المدخلة من قبل المختصين تظهر مباشرة على إيميلات مدراء المناطق، مما يتيح لهم متابعة عمل المختصين واستخراج تقارير تجميعية عنها.
+            </p>
+            <div style="display:flex; align-items:center; gap:10px; padding:9px 12px; background:#ffffff; border-radius:8px; border:1px solid #b5d4cb;">
+              <span style="font-size:13.5px; color:var(--text); flex:1;"><strong style="font-weight:800 !important;">نظام إدخال تقارير المختصين</strong></span>
+              <a href="https://unrwaedu.sharepoint.com/sites/sp_gate" target="_blank" title="فتح النظام" style="flex-shrink:0; display:inline-flex; align-items:center; gap:5px; background:linear-gradient(135deg,#2e8b3e,#359848); border:1px solid #8ad1a0; border-radius:7px; padding:5px 10px; color:#fff; font-size:12px; font-weight:600; text-decoration:none; white-space:nowrap;">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.44 11.05-9.19 9.19a6 6 0 0 1-8.49-8.49l8.57-8.57A4 4 0 1 1 18 8.84l-8.59 8.57a2 2 0 0 1-2.83-2.83l8.49-8.48"/></svg>
+                فتح النظام
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- ثانياً: الأدلة -->
+        <div class="sub-section">
+          <div class="sub-title"><span class="dot" style="background:#2e8b3e"></span><strong><u>ثانياً: الأدلة الإرشادية المعدة:</u></strong></div>
+          <div style="display:flex; flex-direction:column; gap:9px;">
+
+            <div style="display:flex; align-items:center; gap:12px; padding:11px 14px; background:linear-gradient(135deg,#f0faf9,#e2efec); border-radius:9px; border:1px solid #b5d4cb;">
+              <span style="font-size:13.5px; color:var(--text); flex:1; line-height:1.75;"><strong>دليل نظام التقارير الإلكترونية:</strong> يوضح للمختص كيفية التعامل مع النظام وإدخال تقاريره.</span>
+              <a href="https://drive.google.com/file/d/1REzCeDC7qp6Axzs1MSKCXys71b6qjuSz/view?usp=sharing" target="_blank" title="فتح الدليل" class="clip-btn" style="background:linear-gradient(135deg,#2e8b3e,#359848); color:#fff; border-color:#8ad1a0;">📎</a>
+            </div>
+
+            <div style="display:flex; align-items:center; gap:12px; padding:11px 14px; background:linear-gradient(135deg,#f0faf9,#e2efec); border-radius:9px; border:1px solid #b5d4cb;">
+              <span style="font-size:13.5px; color:var(--text); flex:1; line-height:1.75;"><strong>دليل حول كيفية ضبط إعدادات التقارير على البريد الإلكتروني:</strong><span style="font-weight:400 !important;"> يمكّن مدراء المناطق من أرشفة الإيميلات الخاصة بتقارير الزيارات في مجلدات خاصة، لتعزيز انسيابية العمل وضمان سرعة الوصول إلى التقارير، والحد من فقدان أي رسائل هامة.</span></span>
+              <a href="https://drive.google.com/file/d/1cN2G2WhSqIF9l13dqjHrLNDnlsVM6PIA/view?usp=sharing" target="_blank" title="فتح الدليل" class="clip-btn" style="background:linear-gradient(135deg,#2e8b3e,#359848); color:#fff; border-color:#8ad1a0;">📎</a>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- TASK 12 -->
+    <div class="task-card" id="t12">
+      <div class="task-header" onclick="toggle('t12')">
+        <div class="task-stripe c12">
+          <div class="task-ordinal">المهمة</div>
+          <div class="task-ordinal-name">الثانية عشرة</div>
+        </div>
+        <div class="task-header-content">
+          <div class="task-title-wrap">
+            <div class="task-title">برنامج التيمز</div>
+            <div class="task-meta">تدريب متزامن وغير متزامن · منصة للمعلم · منصة للطالب · دليل إرشادي</div>
+          </div>
+          <div class="task-toggle">▾</div>
+        </div>
+      </div>
+      <div class="task-body">
+
+        <!-- النص التمهيدي -->
+        <div class="intro-text">
+          بعد أن اُختيرت عينة من المدارس لتطبيق برنامج التيمز، <strong>تم العمل على إعداد خطة للتدريب المتزامن وغير المتزامن، وتم البدء بتدريب المعلمين والطلبة من خلال ما يلي:</strong>
+        </div>
+
+        <!-- إنفوجرافيك pill style — نفس شكل المهمة العاشرة (مقاسات وخطوط موحّدة) -->
+        <div style="display:flex; flex-direction:column; gap:8px; padding:8px 0 6px; direction:rtl;">
+
+          <!-- شريط 01 -->
+          <div style="display:flex; align-items:stretch; border-radius:14px; overflow:hidden; box-shadow:0 2px 12px rgba(28,111,175,0.12); min-height:128px;">
+            <div class="pill-strip-num t12-num-pill">
+              <span>01</span>
+            </div>
+            <div style="flex:1; background:linear-gradient(135deg,#e8f4fb,#f0f9ff); border:1px solid rgba(26,58,110,0.14); padding:11px 16px; display:flex; flex-direction:column; justify-content:center; gap:6px; border-radius:0; min-height:0; overflow-y:auto;">
+              <div style="font-size:14.5px; font-weight:800; color:var(--primary); line-height:1.36;">أولاً: إعداد الفيديوهات التوضيحية للمهارات الأساسية</div>
+              <div style="font-size:12.75px; color:var(--text); line-height:1.55;">إعداد الفيديوهات التوضيحية للمهارات الأساسية لكل من المعلم والطالب لاستخدام برنامج التيمز في التعليم.</div>
+            </div>
+          </div>
+
+          <!-- شريط 02 -->
+          <div style="display:flex; align-items:stretch; border-radius:14px; overflow:hidden; box-shadow:0 2px 12px rgba(28,111,175,0.12); min-height:104px;">
+            <div class="pill-strip-num t12-num-pill">
+              <span>02</span>
+            </div>
+            <div style="flex:1; background:linear-gradient(135deg,#e8f4fb,#f0f9ff); border:1px solid rgba(26,58,110,0.14); padding:8px 14px; display:flex; flex-direction:column; justify-content:center; gap:5px; border-radius:0; min-height:0; overflow-y:auto;">
+              <div style="font-size:14.5px; font-weight:800; color:var(--primary); line-height:1.36;">ثانياً: الأنظمة الذكية المطورة</div>
+              <div style="font-size:12.5px; color:var(--text); line-height:1.48;">تم تصميم منصة تحتوي على الفيديوهات التوضيحية لكل من المعلم والطالب، لتسهيل الوصول إليها.</div>
+              <div style="display:flex; flex-direction:row; flex-wrap:wrap; gap:6px; align-items:stretch; width:100%; direction:rtl;">
+                <div style="flex:1 1 200px; min-width:0; min-height:0; border-radius:8px; padding:5px 9px; background:linear-gradient(135deg,#f0f7ff,#e5effb); border:1px solid rgba(28,111,175,0.22); box-shadow:0 1px 6px rgba(26,58,110,0.06); display:flex; flex-direction:column; justify-content:center;">
+                  <div style="display:flex; flex-direction:row; align-items:center; justify-content:space-between; gap:6px; width:100%;">
+                    <div style="flex:1; min-width:0; text-align:right; display:flex; flex-direction:column; justify-content:center;">
+                      <div style="font-size:12px; font-weight:800; color:var(--primary); line-height:1.28;">منصة المعلم</div>
+                    </div>
+                    <a href="https://script.google.com/macros/s/AKfycbxJzBKJmrxRXrDP6pvmK5dQF9XQnt1U51Ipg1FFpzndjOqOGObVrSLM06-AUT2j5S3B/exec" target="_blank" rel="noopener" title="منصة المعلم" style="flex-shrink:0; display:inline-flex; align-items:center; gap:4px; background:var(--unrwa-light); border:1px solid var(--unrwa-sky); border-radius:6px; padding:4px 9px; color:var(--unrwa-blue); font-size:11.5px; font-weight:600; text-decoration:none; white-space:nowrap; transition:background 0.15s;">
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.44 11.05-9.19 9.19a6 6 0 0 1-8.49-8.49l8.57-8.57A4 4 0 1 1 18 8.84l-8.59 8.57a2 2 0 0 1-2.83-2.83l8.49-8.48"/></svg>
+                      فتح ↗
+                    </a>
+                  </div>
+                </div>
+                <div style="flex:1 1 200px; min-width:0; min-height:0; border-radius:8px; padding:5px 9px; background:linear-gradient(135deg,#f0f7ff,#e5effb); border:1px solid rgba(28,111,175,0.22); box-shadow:0 1px 6px rgba(26,58,110,0.06); display:flex; flex-direction:column; justify-content:center;">
+                  <div style="display:flex; flex-direction:row; align-items:center; justify-content:space-between; gap:6px; width:100%;">
+                    <div style="flex:1; min-width:0; text-align:right; display:flex; flex-direction:column; justify-content:center;">
+                      <div style="font-size:12px; font-weight:800; color:var(--primary); line-height:1.28;">منصة الطالب</div>
+                    </div>
+                    <a href="https://script.google.com/macros/s/AKfycbyTe5rUlJe1GqLHREjccUQw56X2DmfS-v69ol95CZikhe7t1jPyS6c1wswYQU0p5s4/exec" target="_blank" rel="noopener" title="منصة الطالب" style="flex-shrink:0; display:inline-flex; align-items:center; gap:4px; background:var(--unrwa-light); border:1px solid var(--unrwa-sky); border-radius:6px; padding:4px 9px; color:var(--unrwa-blue); font-size:11.5px; font-weight:600; text-decoration:none; white-space:nowrap; transition:background 0.15s;">
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.44 11.05-9.19 9.19a6 6 0 0 1-8.49-8.49l8.57-8.57A4 4 0 1 1 18 8.84l-8.59 8.57a2 2 0 0 1-2.83-2.83l8.49-8.48"/></svg>
+                      فتح ↗
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- شريط 03 -->
+          <div style="display:flex; align-items:stretch; border-radius:14px; overflow:hidden; box-shadow:0 2px 12px rgba(28,111,175,0.12); min-height:128px;">
+            <div class="pill-strip-num t12-num-pill">
+              <span>03</span>
+            </div>
+            <div style="flex:1; background:linear-gradient(135deg,#e8f4fb,#f0f9ff); border:1px solid rgba(26,58,110,0.14); padding:11px 16px; display:flex; flex-direction:column; justify-content:center; gap:8px; border-radius:0; min-height:0; overflow-y:auto; text-align:right;">
+              <div style="font-size:14.5px; font-weight:800; color:var(--primary); line-height:1.36;"><strong>ثالثاً: إعداد دليل إرشادي</strong></div>
+              <div style="display:flex; flex-direction:row; align-items:center; justify-content:space-between; gap:11px; width:100%;">
+                <div style="flex:1; min-width:0; font-size:12.75px; color:var(--text); line-height:1.55; text-align:right;">دليل لأهم المهارات التي تلزم الطالب لاستخدام برنامج Microsoft Teams</div>
+                <a href="https://drive.google.com/file/d/1JQR3G-4RNRHwn_bbwAp_hfYRnfHlyGVt/view?usp=sharing" target="_blank" rel="noopener" title="فتح الدليل" style="flex-shrink:0; display:inline-flex; align-items:center; gap:5px; background:var(--unrwa-light); border:1px solid var(--unrwa-sky); border-radius:7px; padding:5px 10px; color:var(--unrwa-blue); font-size:12px; font-weight:600; text-decoration:none; white-space:nowrap; transition:background 0.15s;">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.44 11.05-9.19 9.19a6 6 0 0 1-8.49-8.49l8.57-8.57A4 4 0 1 1 18 8.84l-8.59 8.57a2 2 0 0 1-2.83-2.83l8.49-8.48"/></svg>
+                  فتح الدليل 📎
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+    <!-- TASK 13 -->
+    <div class="task-card" id="t13">
+      <div class="task-header" onclick="toggle('t13')">
+        <div class="task-stripe c13">
+          <div class="task-ordinal">المهمة</div>
+          <div class="task-ordinal-name">الثالثة عشرة</div>
+        </div>
+        <div class="task-header-content">
+          <div class="task-title-wrap">
+            <div class="task-title">المساهمة في إعداد استبانة ذوي الحاجات الخاصة</div>
+            <div class="task-meta">تصميم · متابعة التعبئة · تحليل البيانات · التقرير النهائي</div>
+          </div>
+          <div class="task-toggle">▾</div>
+        </div>
+      </div>
+      <div class="task-body">
+
+        <!-- النص التمهيدي -->
+        <div class="intro-text">
+          <strong>حيث تم تصميم الاستبانة على برنامج Microsoft Forms، ومتابعة تعبئتها من قبل الطلبة، والعمل على تحليلها وإعداد التقرير الخاص بها.</strong>
+        </div>
+
+        <!-- البنود -->
+        <div class="sub-section">
+          <div style="display:flex; flex-direction:column; gap:9px;">
+
+            <div style="display:flex; align-items:center; gap:12px; padding:11px 14px; background:var(--surface2); border-radius:9px; border:1px solid var(--border);">
+              <span style="font-size:13.5px; flex:1; line-height:1.75;"><strong>استبانة احتياجات الطلبة من ذوي الإعاقة</strong></span>
+              <a href="https://forms.cloud.microsoft/Pages/DesignPageV2.aspx?prevorigin=shell&origin=NeoPortalPage&subpage=design&id=QWovJukgQEGNPv317stBV1axziHHU8xEhnHcItG2YtlUQjIxUUE2SERZUUlNSEg2Qk5QRU1YWUNQVi4u" target="_blank" title="فتح الاستبانة" style="flex-shrink:0; display:inline-flex; align-items:center; gap:5px; background:var(--unrwa-light); border:1px solid var(--unrwa-sky); border-radius:7px; padding:5px 10px; color:var(--unrwa-blue); font-size:12px; font-weight:600; text-decoration:none; white-space:nowrap;">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.44 11.05-9.19 9.19a6 6 0 0 1-8.49-8.49l8.57-8.57A4 4 0 1 1 18 8.84l-8.59 8.57a2 2 0 0 1-2.83-2.83l8.49-8.48"/></svg>
+                فتح الاستبانة
+              </a>
+            </div>
+
+            <div style="display:flex; align-items:center; gap:12px; padding:11px 14px; background:var(--surface2); border-radius:9px; border:1px solid var(--border);">
+              <span style="font-size:13.5px; flex:1; line-height:1.75;"><strong>دليل تعبئة الاستبانة</strong></span>
+              <a href="https://drive.google.com/file/d/1ohNxurncvppcagFfnFtkGbOGJR1geUv5/view?usp=sharing" target="_blank" title="فتح الدليل" class="clip-btn">📎</a>
+            </div>
+
+            <div style="display:flex; align-items:center; gap:12px; padding:11px 14px; background:var(--surface2); border-radius:9px; border:1px solid var(--border);">
+              <span style="font-size:13.5px; flex:1; line-height:1.75;"><strong>تقرير حول استمارة تحديث بيانات احتياجات الطلبة من ذوي الإعاقة</strong></span>
+              <a href="https://drive.google.com/file/d/1dvPbRzFrxvwb3Jg5iR8PArVOxukWsJDh/view?usp=sharing" target="_blank" title="فتح التقرير" class="clip-btn">📎</a>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div><!-- end task-grid -->
+</div><!-- end container -->
+
+<!-- ══ قسم الأنظمة والأدلة — داخل منطقة المحتوى ══ -->
+<div id="quick-ref-section" style="background:var(--surface); border-top:2px solid var(--border); padding:40px 32px 60px; direction:rtl; flex:1; display:none;">
+  <div style="max-width:100%; margin:0;">
+
+    <div style="text-align:center; margin-bottom:36px;" id="quick-ref">
+      <div style="display:inline-flex; align-items:center; gap:10px; background:linear-gradient(135deg,#1a3a6e,#1c6faf); color:#fff; border-radius:999px; padding:10px 28px; margin-bottom:12px; box-shadow:0 4px 16px rgba(26,58,110,0.2);">
+        <span style="font-size:18px;">⚡</span>
+        <span style="font-size:17px; font-weight:700;">مرجع سريع</span>
+      </div>
+      <div style="font-size:14px; color:var(--text-muted);">جميع الأنظمة الذكية والأدلة الإرشادية في مكان واحد</div>
+    </div>
+
+    <div class="quick-ref-grid" style="display:grid; grid-template-columns:1fr 1fr; gap:20px;">
+
+      <!-- ═══ الأنظمة الذكية ═══ -->
+      <div style="border-radius:16px; border:1px solid var(--border); overflow:hidden; box-shadow:0 2px 12px rgba(28,111,175,0.08);">
+        <div onclick="toggleSection('systems')" style="background:linear-gradient(135deg,#1a3a6e,#1c6faf); padding:18px 22px; cursor:pointer; display:flex; align-items:center; justify-content:space-between; user-select:none;">
+          <div style="display:flex; align-items:center; gap:12px;">
+            <div style="width:38px; height:38px; border-radius:10px; background:rgba(255,255,255,0.15); display:flex; align-items:center; justify-content:center; font-size:18px;">⚙️</div>
+            <div>
+              <div style="font-size:15px; font-weight:700; color:#fff;">الأنظمة الذكية المطورة</div>
+              <div style="font-size:11px; color:rgba(255,255,255,0.7); margin-top:2px;">13 نظاماً ومنصة</div>
+            </div>
+          </div>
+          <div id="systems-icon" style="font-size:18px; color:#fff; transition:transform 0.3s;">▾</div>
+        </div>
+        <div id="systems-body" style="max-height:0; overflow:hidden; transition:max-height 0.4s cubic-bezier(0.4,0,0.2,1);">
+          <div class="quick-ref-systems-list" style="padding:16px 18px; display:flex; flex-direction:column; gap:9px; background:var(--surface2);">
+
+            <div style="display:flex; align-items:center; gap:8px; padding:7px 11px; background:#fff; border-radius:8px; border:1px solid var(--border);">
+              <span style="font-size:12.5px; color:var(--text); flex:1; font-weight:600;">نظام إدارة روابط مجموعات الواتس آب للعام الجديد</span>
+              <a href="https://script.google.com/macros/s/AKfycbwpvgYZGUr5xrenLYfCfBFWuoKnNHIieWhZk5AnPtgv8c3VQIw3qY18-RuyE557JNWc/exec" target="_blank" class="sys-btn">فتح ↗</a>
+            </div>
+
+            <div style="display:flex; align-items:center; gap:8px; padding:7px 11px; background:#fff; border-radius:8px; border:1px solid var(--border);">
+              <span style="font-size:12.5px; color:var(--text); flex:1; font-weight:600;">نظام إدارة مجموعات الواتس آب</span>
+              <a href="https://script.google.com/macros/s/AKfycbwHUwJvAZlFn3B1on0RAqRSW25O87ipA-xEkjdiQQvORukfSeE2JnXzgQFf-un-4hx61g/exec" target="_blank" class="sys-btn">فتح ↗</a>
+            </div>
+
+            <div style="display:flex; align-items:center; gap:8px; padding:7px 11px; background:#fff; border-radius:8px; border:1px solid var(--border);">
+              <span style="font-size:12.5px; color:var(--text); flex:1; font-weight:600;">نظام دليل معلمي الدعم الفني</span>
+              <a href="https://script.google.com/macros/s/AKfycbwRGXTYeNStkCCHYQwQvW4upYVdrlEmTUno2dQurrBeMIsj_O2oBI88c43jSlvnlaYNQQ/exec" target="_blank" class="sys-btn">فتح ↗</a>
+            </div>
+
+            <div style="display:flex; align-items:center; gap:8px; padding:7px 11px; background:#fff; border-radius:8px; border:1px solid var(--border);">
+              <span style="font-size:12.5px; color:var(--text); flex:1; font-weight:600;">نظام تجزئة المواد التعليمية</span>
+              <a href="https://script.google.com/macros/s/AKfycbzpUORFdgGJkvwYSsAwIJQtdy0xF3NNNNhEv6FR1BgWkTiuLLc_A0c2FjRhhec6qcVT/exec" target="_blank" class="sys-btn">فتح ↗</a>
+            </div>
+
+            <div style="display:flex; align-items:center; gap:8px; padding:7px 11px; background:#fff; border-radius:8px; border:1px solid var(--border);">
+              <span style="font-size:12.5px; color:var(--text); flex:1; font-weight:600;">صفحة روابط المختصين الموحدة</span>
+              <a href="https://script.google.com/macros/s/AKfycbypk4kQZo3v-Hy8Jt7vKtgieSf15S_Ehft_4sV_lvpONmbs7Ov43alTUUVJdp5uBRe-/exec" target="_blank" class="sys-btn">فتح ↗</a>
+            </div>
+
+            <div style="display:flex; align-items:center; gap:8px; padding:7px 11px; background:#fff; border-radius:8px; border:1px solid var(--border);">
+              <span style="font-size:12.5px; color:var(--text); flex:1; font-weight:600;">نظام إدارة ملفات روتينات التعلم</span>
+              <a href="https://script.google.com/macros/s/AKfycbx0Hsnnd96U4_bRbSmMtLOI5kt6EmmpDzm_buy4zgqO_I-dCmALfinm2npYeeVBxG1A/exec" target="_blank" class="sys-btn">فتح ↗</a>
+            </div>
+
+            <div style="display:flex; align-items:center; gap:8px; padding:7px 11px; background:#fff; border-radius:8px; border:1px solid var(--border);">
+              <span style="font-size:12.5px; color:var(--text); flex:1; font-weight:600;">منصة التعلم الذاتي Keeplearning</span>
+              <a href="https://keeplearning.unrwa.org/gaza/" target="_blank" class="sys-btn">فتح ↗</a>
+            </div>
+
+            <div style="display:flex; align-items:center; gap:8px; padding:7px 11px; background:#fff; border-radius:8px; border:1px solid var(--border);">
+              <span style="font-size:12.5px; color:var(--text); flex:1;"><strong style="font-weight:800 !important;">نظام إدخال تقارير المختصين</strong> (SharePoint)</span>
+              <a href="https://unrwaedu.sharepoint.com/sites/sp_gate" target="_blank" class="sys-btn">فتح ↗</a>
+            </div>
+
+            <div style="display:flex; align-items:center; gap:8px; padding:7px 11px; background:#fff; border-radius:8px; border:1px solid var(--border);">
+              <span style="font-size:12.5px; color:var(--text); flex:1; font-weight:600;">منصة المعلم — Microsoft Teams</span>
+              <a href="https://script.google.com/macros/s/AKfycbxJzBKJmrxRXrDP6pvmK5dQF9XQnt1U51Ipg1FFpzndjOqOGObVrSLM06-AUT2j5S3B/exec" target="_blank" class="sys-btn">فتح ↗</a>
+            </div>
+
+            <div style="display:flex; align-items:center; gap:8px; padding:7px 11px; background:#fff; border-radius:8px; border:1px solid var(--border);">
+              <span style="font-size:12.5px; color:var(--text); flex:1; font-weight:600;">منصة الطالب — Microsoft Teams</span>
+              <a href="https://script.google.com/macros/s/AKfycbyTe5rUlJe1GqLHREjccUQw56X2DmfS-v69ol95CZikhe7t1jPyS6c1wswYQU0p5s4/exec" target="_blank" class="sys-btn">فتح ↗</a>
+            </div>
+
+            <div style="display:flex; align-items:center; gap:8px; padding:7px 11px; background:#fff; border-radius:8px; border:1px solid var(--border);">
+              <span style="font-size:12.5px; color:var(--text); flex:1; font-weight:600;">نظام الاختبارات</span>
+              <a href="https://script.google.com/macros/s/AKfycbzuTtRKEUc_ZH53JZ3TOd6EkMqsU4wTscsYVzZ1hiyvNl7zr0AG8-2ZTeQwTiE1qiA5/exec?edit_mode=1" target="_blank" class="sys-btn">فتح ↗</a>
+            </div>
+
+            <div style="display:flex; align-items:center; gap:8px; padding:7px 11px; background:#fff; border-radius:8px; border:1px solid var(--border);">
+              <span style="font-size:12.5px; color:var(--text); flex:1; font-weight:600;">بوابة المناطق</span>
+              <a href="https://script.google.com/macros/s/AKfycbw4E8ldZZJ3_wOIO_BK8U1_vWXIFgBePzaY2wJbqJsyAbqSfLaIPr6xFRPLWQYgetk/exec?edit_mode=1" target="_blank" class="sys-btn">فتح ↗</a>
+            </div>
+
+            <div style="display:flex; align-items:center; gap:8px; padding:7px 11px; background:#fff; border-radius:8px; border:1px solid var(--border);">
+              <span style="font-size:12.5px; color:var(--text); flex:1; font-weight:600;">مجتمع الدعم الفني على الواتس آب</span>
+              <a href="https://chat.whatsapp.com/FKZkDLlB42O51FRTb2CYty" target="_blank" class="sys-btn">انضمام ↗</a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- ═══ الأدلة الإرشادية ═══ -->
+      <div style="border-radius:16px; border:1px solid var(--border); overflow:hidden; box-shadow:0 2px 12px rgba(26,125,110,0.08);">
+        <div onclick="toggleSection('guides')" style="background:linear-gradient(135deg,#1a7d6e,#14a08a); padding:18px 22px; cursor:pointer; display:flex; align-items:center; justify-content:space-between; user-select:none;">
+          <div style="display:flex; align-items:center; gap:12px;">
+            <div style="width:38px; height:38px; border-radius:10px; background:rgba(255,255,255,0.15); display:flex; align-items:center; justify-content:center; font-size:18px;">📚</div>
+            <div>
+              <div style="font-size:15px; font-weight:700; color:#fff;">الأدلة الإرشادية</div>
+              <div style="font-size:11px; color:rgba(255,255,255,0.7); margin-top:2px;">10 أدلة وتقارير</div>
+            </div>
+          </div>
+          <div id="guides-icon" style="font-size:18px; color:#fff; transition:transform 0.3s;">▾</div>
+        </div>
+        <div id="guides-body" style="max-height:0; overflow:hidden; transition:max-height 0.4s cubic-bezier(0.4,0,0.2,1);">
+          <div class="quick-ref-guides-list" style="padding:16px 18px; display:flex; flex-direction:column; gap:9px; background:var(--surface2);">
+
+            <div style="display:flex; align-items:center; gap:8px; padding:7px 11px; background:#fff; border-radius:8px; border:1px solid var(--border);">
+              <span style="font-size:12.5px; color:var(--text); flex:1; font-weight:600;">دليل إدارة مجتمعات التعلم المدرسية عبر الواتس آب</span>
+              <a href="https://drive.google.com/file/d/1AGY59CfvN_POHod0lVtgsZtMEEcxoDat/view?usp=sharing" target="_blank" class="guide-btn">📎</a>
+            </div>
+
+            <div style="display:flex; align-items:center; gap:8px; padding:7px 11px; background:#fff; border-radius:8px; border:1px solid var(--border);">
+              <span style="font-size:12.5px; color:var(--text); flex:1; font-weight:600;">دليل إرشادي لاستخدام مجتمعات واتس آب في التعلم عن بعد</span>
+              <a href="https://drive.google.com/file/d/1Eu04Eb2r4k3LUlA5Egr0TG3Dt_2xF12q/view?usp=sharing" target="_blank" class="guide-btn">📎</a>
+            </div>
+
+            <div style="display:flex; align-items:center; gap:8px; padding:7px 11px; background:#fff; border-radius:8px; border:1px solid var(--border);">
+              <span style="font-size:12.5px; color:var(--text); flex:1; font-weight:600;">دليل تعليمات تشكيل العام الدراسي الجديد 2025-2026</span>
+              <a href="https://drive.google.com/file/d/1Cmwpj2lbDJ1nnTM3JEJV0mQlEqT5ExCp/view?usp=sharing" target="_blank" class="guide-btn">📎</a>
+            </div>
+
+            <div style="display:flex; align-items:center; gap:8px; padding:7px 11px; background:#fff; border-radius:8px; border:1px solid var(--border);">
+              <span style="font-size:12.5px; color:var(--text); flex:1; font-weight:600;">دليل حول توجيهات الدور الفني للمعلمين في التعلم عن بعد</span>
+              <a href="https://drive.google.com/file/d/1IdAtVsxincE_nNnnaQVWSEalfcvAKN-M/view?usp=sharing" target="_blank" class="guide-btn">📎</a>
+            </div>
+
+            <div style="display:flex; align-items:center; gap:8px; padding:7px 11px; background:#fff; border-radius:8px; border:1px solid var(--border);">
+              <span style="font-size:12.5px; color:var(--text); flex:1; font-weight:600;">دليل نظام إدارة روتينات التعلم</span>
+              <a href="https://drive.google.com/file/d/1PTYXh5dCVtcTsSBoHVFxbyZ8oagcavBR/view?usp=sharing" target="_blank" class="guide-btn">📎</a>
+            </div>
+
+            <div style="display:flex; align-items:center; gap:8px; padding:7px 11px; background:#fff; border-radius:8px; border:1px solid var(--border);">
+              <span style="font-size:12.5px; color:var(--text); flex:1; font-weight:600;">دليل إرشادات دخول الطالب إلى صفحة الاختبار</span>
+              <a href="https://drive.google.com/file/d/19RRBAymSF2TGglMIk6KhZyLVPGLsKdeV/view?usp=sharing" target="_blank" class="guide-btn">📎</a>
+            </div>
+
+            <div style="display:flex; align-items:center; gap:8px; padding:7px 11px; background:#fff; border-radius:8px; border:1px solid var(--border);">
+              <span style="font-size:12.5px; color:var(--text); flex:1; font-weight:600;">دليل مراجعة الاختبارات من قبل المختصين</span>
+              <a href="https://docs.google.com/document/d/1xIlWlv9bQaYImNbVsX8eAMhAYppM5rS6/edit?usp=sharing" target="_blank" class="guide-btn">📎</a>
+            </div>
+
+            <div style="display:flex; align-items:center; gap:8px; padding:7px 11px; background:#fff; border-radius:8px; border:1px solid var(--border);">
+              <span style="font-size:12.5px; color:var(--text); flex:1; font-weight:600;">دليل نظام التقارير الإلكترونية للمختصين</span>
+              <a href="https://drive.google.com/file/d/1REzCeDC7qp6Axzs1MSKCXys71b6qjuSz/view?usp=sharing" target="_blank" class="guide-btn">📎</a>
+            </div>
+
+            <div style="display:flex; align-items:center; gap:8px; padding:7px 11px; background:#fff; border-radius:8px; border:1px solid var(--border);">
+              <span style="font-size:12.5px; color:var(--text); flex:1; font-weight:600;">دليل ضبط إعدادات البريد الإلكتروني لمدراء المناطق</span>
+              <a href="https://drive.google.com/file/d/1cN2G2WhSqIF9l13dqjHrLNDnlsVM6PIA/view?usp=sharing" target="_blank" class="guide-btn">📎</a>
+            </div>
+
+            <div style="display:flex; align-items:center; gap:8px; padding:7px 11px; background:#fff; border-radius:8px; border:1px solid var(--border);">
+              <span style="font-size:12.5px; color:var(--text); flex:1; font-weight:600;">دليل مهارات الطالب على Microsoft Teams</span>
+              <a href="https://drive.google.com/file/d/1JQR3G-4RNRHwn_bbwAp_hfYRnfHlyGVt/view?usp=sharing" target="_blank" class="guide-btn">📎</a>
+            </div>
+
+            <div style="display:flex; align-items:center; gap:8px; padding:7px 11px; background:#fff; border-radius:8px; border:1px solid var(--border);">
+              <span style="font-size:12.5px; color:var(--text); flex:1; font-weight:600;">تقرير استمارة تحديث بيانات احتياجات الطلبة من ذوي الإعاقة</span>
+              <a href="https://drive.google.com/file/d/1dvPbRzFrxvwb3Jg5iR8PArVOxukWsJDh/view?usp=sharing" target="_blank" class="guide-btn">📎</a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div><!-- end quick ref section -->
+</div><!-- end content column flex:1 -->
+</div><!-- end layout flex -->
+
+<style>
+  .nav-link {
+    display:flex; align-items:center; gap:9px;
+    padding:8px 13px; cursor:pointer;
+    border-right:3px solid transparent;
+    transition:all 0.15s; text-decoration:none;
+  }
+  .nav-link:hover { background:rgba(255,255,255,0.07); }
+  .nav-link.active-link { background:rgba(255,255,255,0.14); border-right-color:#93c5fd; }
+  .nav-link span { font-size:14px; color:rgba(255,255,255,0.72); }
+  .nav-link.active-link span { color:#fff; font-weight:600; }
+  .nb { width:22px; height:22px; border-radius:6px; flex-shrink:0; display:flex; align-items:center; justify-content:center; font-size:9px; font-weight:900; color:#fff; }
+  .task-card { display:none; }
+  .task-card.visible { display:block; }
+  .task-grid { gap: 0; }
+  .container { padding-left: 0 !important; padding-right: 0 !important; padding-top: 0 !important; }
+  .task-card.visible { border-radius: 0; border-left: none; border-right: none; box-shadow: none; }
+  .section-title-wrap { padding: 20px 28px 0; }
+  .sub-section { margin-bottom: 28px; }
+  .intro-text { margin-bottom: 24px; font-size: 16px; line-height: 2; padding: 16px 22px; }
+  .sub-title { font-size: 18px; margin-bottom: 14px; gap: 10px; }
+  .content-list li { padding: 10px 16px 10px 0; font-size: 15.5px; line-height: 1.9; }
+
+  .task-title { font-size: 20px; line-height: 1.55; }
+  .task-meta { font-size: 13.5px; }
+  .resource-row-banner > span,
+  .resource-row-banner span,
+  .resource-row-banner div,
+  .resource-row-banner p,
+  .resource-row-banner strong { font-size: 15px !important; line-height: 1.9 !important; }
+  .nav-link span { font-size: 14.5px; }
+</style>
+
+<script>
+  function showTask(id, el) {
+    document.querySelectorAll('.task-card').forEach(c => c.classList.remove('visible'));
+    const quickRef = document.getElementById('quick-ref-section');
+    if (quickRef) quickRef.style.display = 'none';
+    const card = document.getElementById(id);
+    if (card) { card.classList.add('visible'); card.classList.add('open'); }
+    document.querySelectorAll('.nav-link').forEach(a => a.classList.remove('active-link'));
+    if (el) el.classList.add('active-link');
+    return false;
+  }
+  function showQuickRef(el) {
+    document.querySelectorAll('.task-card').forEach(c => c.classList.remove('visible'));
+    const quickRef = document.getElementById('quick-ref-section');
+    if (quickRef) quickRef.style.display = 'block';
+    document.querySelectorAll('.nav-link').forEach(a => a.classList.remove('active-link'));
+    if (el) el.classList.add('active-link');
+    return false;
+  }
+  window.addEventListener('load', function() {
+    showTask('t1', document.querySelector('.nav-link'));
+  });
+</script>
+
+<style>
+  .sys-btn {
+    flex-shrink:0; display:inline-flex; align-items:center;
+    background:var(--unrwa-light); border:1px solid var(--unrwa-sky);
+    border-radius:7px; padding:4px 10px;
+    color:var(--unrwa-blue); font-size:12px; font-weight:600;
+    text-decoration:none; white-space:nowrap; transition:background 0.15s;
+  }
+  .sys-btn:hover { background:#dbeeff; }
+  .guide-btn {
+    flex-shrink:0; display:inline-flex; align-items:center; justify-content:center;
+    width:32px; height:32px;
+    background:#fff; border:1px solid var(--border);
+    border-radius:8px; font-size:16px; text-decoration:none;
+    transition:background 0.15s, transform 0.15s;
+  }
+  .guide-btn:hover { background:#e8f4fb; transform:scale(1.1); }
+</style>
+
+<script>
+  function toggleSection(id) {
+    const body = document.getElementById(id + '-body');
+    const icon = document.getElementById(id + '-icon');
+    const isOpen = body.style.maxHeight && body.style.maxHeight !== '0px';
+    body.style.maxHeight = isOpen ? '0' : '2000px';
+    icon.style.transform = isOpen ? 'rotate(0deg)' : 'rotate(180deg)';
+  }
+</script>
+
+<footer style="
+  background: linear-gradient(135deg, #0e2247 0%, #1a3a6e 50%, #1c6faf 100%);
+  padding: 36px 40px;
+  text-align: center;
+  direction: rtl;
+  position: relative;
+  overflow: hidden;
+">
+  <div style="position:absolute; inset:0; background:url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' stroke=\'rgba(255,255,255,0.04)\' stroke-width=\'1\'%3E%3Ccircle cx=\'30\' cy=\'30\' r=\'20\'/%3E%3Ccircle cx=\'30\' cy=\'30\' r=\'12\'/%3E%3C/g%3E%3C/svg%3E') center/60px; pointer-events:none;"></div>
+  <div style="position:relative; z-index:1;">
+    <div style="display:inline-flex; align-items:center; gap:10px; background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.15); border-radius:999px; padding:8px 24px; margin-bottom:14px;">
+      <span style="font-size:16px;">🛡️</span>
+      <span style="font-size:13px; font-weight:700; color:rgba(255,255,255,0.9); letter-spacing:0.5px;">فريق الدعم الفني المركزي</span>
+    </div>
+    <div style="font-size:12px; color:rgba(255,255,255,0.5); margin-top:4px;">
+      جميع الحقوق محفوظة &copy; 2025-2026
+    </div>
+  </div>
+</footer>
+
+<script>
+  function toggle(id) {
+    const card = document.getElementById(id);
+    card.classList.toggle('open');
+  }
+
+  /* ── Animated counters ── */
+  function animateCounter(el, target, duration) {
+    const start = performance.now();
+    const step = (now) => {
+      const elapsed = now - start;
+      const progress = Math.min(elapsed / duration, 1);
+      // ease-out cubic
+      const ease = 1 - Math.pow(1 - progress, 3);
+      el.textContent = Math.round(ease * target).toLocaleString('ar-EG');
+      if (progress < 1) requestAnimationFrame(step);
+      else el.textContent = target.toLocaleString('ar-EG');
+    };
+    requestAnimationFrame(step);
+  }
+
+  function initImageBanners() {
+    const scopeSelector = '.task-body a[target="_blank"], #quick-ref-section a[target="_blank"]';
+    const iconOnlyPattern = /^[\s\u200f\u200e↗📎]+$/;
+    const iconMarkup = '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg>';
+
+    document.querySelectorAll(scopeSelector).forEach((link) => {
+      if (link.classList.contains('no-banner-link')) return;
+      link.classList.remove('clip-btn');
+      link.classList.remove('image-banner-link');
+      link.classList.add('link-card-action');
+
+      const text = (link.textContent || '').trim();
+      const title = (link.getAttribute('title') || '').trim();
+      let label = text;
+
+      if (!label || iconOnlyPattern.test(label)) {
+        label = title || 'فتح الرابط';
+      }
+
+      link.innerHTML = iconMarkup + '<span>' + label + '</span>';
+
+      const row = link.parentElement;
+      if (row && row.tagName === 'DIV' && row.querySelector('span')) {
+        row.classList.add('resource-row-banner');
+        if (!row.dataset.bannerBound) {
+          row.addEventListener('click', (event) => {
+            if (event.target.closest('a')) return;
+            window.open(link.href, '_blank');
+          });
+          row.dataset.bannerBound = '1';
+        }
+      }
+    });
+
+    const tones = ['featured-tone-1', 'featured-tone-2', 'featured-tone-3', 'featured-tone-4'];
+    document.querySelectorAll('.resource-row-banner').forEach((row, index) => {
+      row.classList.add('featured-link-row', tones[index % tones.length]);
+      const action = row.querySelector('.link-card-action span');
+      if (action && action.textContent.trim() !== 'فتح') {
+        action.textContent = 'فتح';
+      }
+    });
+
+    const toneClasses = ['featured-tone-1', 'featured-tone-2', 'featured-tone-3', 'featured-tone-4', 'featured-tone-blue', 'featured-tone-purple', 'featured-tone-purple-soft', 'featured-tone-green', 'featured-tone-red'];
+    document.querySelectorAll('#t1 .resource-row-banner').forEach((row) => {
+      row.classList.remove(...toneClasses);
+      row.classList.add('featured-link-row', 'featured-tone-blue');
+    });
+    document.querySelectorAll('#t2 .resource-row-banner').forEach((row) => {
+      row.classList.remove(...toneClasses);
+      row.classList.add('featured-link-row', 'featured-tone-2');
+    });
+    document.querySelectorAll('#t3 .resource-row-banner').forEach((row) => {
+      row.classList.remove(...toneClasses);
+      row.classList.add('featured-link-row', 'featured-tone-purple');
+    });
+    document.querySelectorAll('#t6 .resource-row-banner').forEach((row) => {
+      row.classList.remove(...toneClasses);
+      row.classList.add('featured-link-row', 'featured-tone-green');
+    });
+    document.querySelectorAll('#t8 .resource-row-banner').forEach((row) => {
+      row.classList.remove(...toneClasses);
+      row.classList.add('featured-link-row', 'featured-tone-purple');
+    });
+    document.querySelectorAll('#t9 .resource-row-banner').forEach((row) => {
+      row.classList.remove(...toneClasses);
+      row.classList.add('featured-link-row', 'featured-tone-red');
+    });
+    document.querySelectorAll('#t11 .resource-row-banner').forEach((row) => {
+      row.classList.remove(...toneClasses);
+      row.classList.add('featured-link-row', 'featured-tone-green');
+    });
+    document.querySelectorAll('#t12 .resource-row-banner').forEach((row) => {
+      row.classList.remove(...toneClasses);
+      row.classList.add('featured-link-row', 'featured-tone-blue');
+    });
+    document.querySelectorAll('#t13 .resource-row-banner').forEach((row) => {
+      row.classList.remove(...toneClasses);
+      row.classList.add('featured-link-row', 'featured-tone-purple-soft');
+    });
+    document.querySelectorAll('#systems-body .resource-row-banner').forEach((row) => {
+      row.classList.remove(...toneClasses);
+      row.classList.add('featured-link-row', 'featured-tone-blue');
+    });
+    document.querySelectorAll('#guides-body .resource-row-banner').forEach((row) => {
+      row.classList.remove(...toneClasses);
+      row.classList.add('featured-link-row', 'featured-tone-green');
+    });
+
+  }
+
+  window.addEventListener('load', () => {
+    initImageBanners();
+    setTimeout(() => {
+      animateCounter(document.getElementById('cnt1'), 282,  1800);
+      animateCounter(document.getElementById('cnt2'), 7242, 2200);
+      animateCounter(document.getElementById('cnt3'), 13,   1400);
+      animateCounter(document.getElementById('cnt4'), 6,    1000);
+    }, 300);
+  });
+</script>
+<!-- ══ MOBILE BOTTOM NAV ══ -->
+<nav id="mobile-bottom-nav" style="
+  display:none;
+  position:fixed; bottom:0; right:0; left:0; z-index:1000;
+  background:#1a3a6e;
+  border-top:2px solid rgba(255,255,255,0.12);
+  padding:0;
+  direction:rtl;
+  box-shadow:0 -4px 20px rgba(14,34,71,0.35);
+">
+  <!-- Top row: prev / current task label / next -->
+  <div style="display:flex; align-items:center; justify-content:space-between; padding:8px 14px 4px;">
+    <button onclick="mobileNavPrev()" style="background:rgba(255,255,255,0.10); border:1px solid rgba(255,255,255,0.2); color:#fff; border-radius:8px; padding:5px 14px; font-size:12px; font-family:inherit; cursor:pointer; font-weight:600;">
+      ◂ السابق
+    </button>
+    <div id="mobile-current-label" style="font-size:13px; font-weight:700; color:#fff; text-align:center; flex:1; padding:0 10px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">
+      المهمة الأولى
+    </div>
+    <button onclick="mobileNavNext()" style="background:rgba(255,255,255,0.10); border:1px solid rgba(255,255,255,0.2); color:#fff; border-radius:8px; padding:5px 14px; font-size:12px; font-family:inherit; cursor:pointer; font-weight:600;">
+      التالي ▸
+    </button>
+  </div>
+  <!-- Bottom row: task number dots -->
+  <div style="display:flex; align-items:center; justify-content:center; gap:5px; padding:4px 10px 10px; overflow-x:auto; -webkit-overflow-scrolling:touch;">
+    <button onclick="mobileGoTask('t1','المهمة الأولى',this)" class="mob-dot mob-dot-active" style="background:#2059a8;" title="1">1</button>
+    <button onclick="mobileGoTask('t2','المهمة الثانية',this)" class="mob-dot" style="background:#1a7d6e;" title="2">2</button>
+    <button onclick="mobileGoTask('t3','المهمة الثالثة',this)" class="mob-dot" style="background:#5e3a9e;" title="3">3</button>
+    <button onclick="mobileGoTask('t4','المهمة الرابعة',this)" class="mob-dot" style="background:#b07800;" title="4">4</button>
+    <button onclick="mobileGoTask('t5','المهمة الخامسة',this)" class="mob-dot" style="background:#b03030;" title="5">5</button>
+    <button onclick="mobileGoTask('t6','المهمة السادسة',this)" class="mob-dot" style="background:#2e8b3e;" title="6">6</button>
+    <button onclick="mobileGoTask('t7','المهمة السابعة',this)" class="mob-dot" style="background:#0e5c8a;" title="7">7</button>
+    <button onclick="mobileGoTask('t8','المهمة الثامنة',this)" class="mob-dot" style="background:#4a2080;" title="8">8</button>
+    <button onclick="mobileGoTask('t9','المهمة التاسعة',this)" class="mob-dot" style="background:#8a2e10;" title="9">9</button>
+    <button onclick="mobileGoTask('t10','المهمة العاشرة',this)" class="mob-dot" style="background:#1a3a6e; font-size:9px;" title="10">10</button>
+    <button onclick="mobileGoTask('t11','المهمة الحادية عشرة',this)" class="mob-dot" style="background:#2e8b3e; font-size:9px;" title="11">11</button>
+    <button onclick="mobileGoTask('t12','المهمة الثانية عشرة',this)" class="mob-dot" style="background:#1c5a9e; font-size:9px;" title="12">12</button>
+    <button onclick="mobileGoTask('t13','المهمة الثالثة عشرة',this)" class="mob-dot" style="background:#7a1a80; font-size:9px;" title="13">13</button>
+    <button onclick="mobileGoQuickRef(this)" class="mob-dot" style="background:#1a7d6e; font-size:10px;" title="مرجع">⚙</button>
+  </div>
+</nav>
+
+<style>
+  .mob-dot {
+    width:30px; height:30px; border-radius:8px; border:2px solid rgba(255,255,255,0.15);
+    color:#fff; font-size:11px; font-weight:800; cursor:pointer;
+    font-family:inherit; flex-shrink:0;
+    transition:transform 0.15s, border-color 0.15s;
+    display:flex; align-items:center; justify-content:center;
+  }
+  .mob-dot:active { transform:scale(0.9); }
+  .mob-dot-active { border-color:#93c5fd !important; box-shadow:0 0 0 2px rgba(147,197,253,0.4); transform:scale(1.12); }
+</style>
+
+<script>
+  const mobileTaskIds  = ['t1','t2','t3','t4','t5','t6','t7','t8','t9','t10','t11','t12','t13'];
+  const mobileLabels   = ['المهمة الأولى','المهمة الثانية','المهمة الثالثة','المهمة الرابعة','المهمة الخامسة','المهمة السادسة','المهمة السابعة','المهمة الثامنة','المهمة التاسعة','المهمة العاشرة','المهمة الحادية عشرة','المهمة الثانية عشرة','المهمة الثالثة عشرة'];
+  let mobileCurrentIdx = 0;
+  let mobileIsQuickRef = false;
+
+  function mobileGoTask(id, label, btn) {
+    mobileIsQuickRef = false;
+    mobileCurrentIdx = mobileTaskIds.indexOf(id);
+    document.getElementById('mobile-current-label').textContent = label;
+    document.querySelectorAll('.mob-dot').forEach(d => d.classList.remove('mob-dot-active'));
+    if (btn) btn.classList.add('mob-dot-active');
+    // sync with desktop showTask
+    showTask(id, document.querySelector('.nav-link[href="#' + id + '"]'));
+    window.scrollTo({top:0, behavior:'smooth'});
+  }
+
+  function mobileGoQuickRef(btn) {
+    mobileIsQuickRef = true;
+    document.getElementById('mobile-current-label').textContent = 'مرجع سريع';
+    document.querySelectorAll('.mob-dot').forEach(d => d.classList.remove('mob-dot-active'));
+    if (btn) btn.classList.add('mob-dot-active');
+    showQuickRef(null);
+    window.scrollTo({top:0, behavior:'smooth'});
+  }
+
+  function mobileNavNext() {
+    if (mobileIsQuickRef) return;
+    const next = Math.min(mobileCurrentIdx + 1, mobileTaskIds.length - 1);
+    const dots = document.querySelectorAll('.mob-dot');
+    mobileGoTask(mobileTaskIds[next], mobileLabels[next], dots[next]);
+  }
+
+  function mobileNavPrev() {
+    if (mobileIsQuickRef) {
+      mobileIsQuickRef = false;
+      const dots = document.querySelectorAll('.mob-dot');
+      mobileGoTask(mobileTaskIds[mobileCurrentIdx], mobileLabels[mobileCurrentIdx], dots[mobileCurrentIdx]);
+      return;
+    }
+    const prev = Math.max(mobileCurrentIdx - 1, 0);
+    const dots = document.querySelectorAll('.mob-dot');
+    mobileGoTask(mobileTaskIds[prev], mobileLabels[prev], dots[prev]);
+  }
+</script>
+</body>
+</html>
